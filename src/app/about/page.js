@@ -14,7 +14,7 @@ const About = () => {
         </div>
         <p className="text-xl mt-18">
           I am a full stack developer with a background in Industrial Engineering and logistics. 
-          I love learning new stuff all the time. Not only learning new programming languages and databases, but learning new ways of working too. I think it's remarkable the way working changed since I started my journey. Self-managed teams were a dream of the future and now it is a reality.
+          I love learning new stuff all the time. Not only learning new programming languages and databases, but learning new ways of working too. I think it is remarkable the way working changed since I started my journey. Self-managed teams were a dream of the future and now it is a reality.
         </p>
 
         <br />
