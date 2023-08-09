@@ -73,9 +73,9 @@ const css = "/assets/css.png";
   return (
     <div
       name="experience"
-      className="bg-white dark:bg-gradient-to-b from-black to-gray-800 w-full md:h-screen text-white"
+      className="bg-white dark:bg-gradient-to-b from-black to-gray-800 w-full md:h-screen dark:text-white"
     >
-      <div className="max-w-screen-lg mx-auto  flex flex-col justify-center w-full text-white h-full">  
+      <div className="max-w-screen-lg mx-auto  flex flex-col justify-center w-full  h-full">  
         <div>
           <p className="py-1 text-3xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
