@@ -89,25 +89,7 @@ export default function IndexPage() {
         </div>
       ) : null}
 
-      {/* 'name' input registered with react-hook-form and simple validation */}
-      <div className="form-group mb-4">
-        <label htmlFor="name">Name</label>
-        <input
-          id="contactName"
-          type="text"
-          aria-invalid={errors?.name}
-          aria-describedby="name-error"
-          autoComplete="name"
-          className="form-control"
-          placeholder="Name"
-          {...register('name', { required: requiredFieldErrorMsg })}
-        />
-        {errors.name && (
-          <span id="name-error" className="formValidationError">
-            This field is required
-          </span>
-        )}
-      </div>
+
 
       {/* 'email' input registered with react-hook-form and required + email regex validation */}
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
