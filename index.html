@@ -156,7 +156,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
       <a href="#logistica" data-i="nav.log">Logística</a>
       <a href="#comercial" data-i="nav.com">Comercial</a>
       <a href="#contacto" data-i="nav.con">Contacto</a>
-      <button class="lang" id="lang" type="button" aria-label="Cambiar idioma / Switch language"><span data-l="es" class="on">ES</span><span data-l="en">EN</span></button>
+      <button class="lang" id="lang" type="button" aria-label="Cambiar idioma / Switch language / Changer de langue"><span data-l="es" class="on">ES</span><span data-l="en">EN</span><span data-l="fr">FR</span></button>
     </nav>
   </div>
 </header>
@@ -378,15 +378,60 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "slot.a":"A fast","slot.b":"B medium","slot.c":"C slow","slot.dock":"docks",
     "tip.occ":"Occupied","tip.pick":"Reserved for picking","tip.move":"In transit"
   };
+  var FR = {
+    "nav.log":"Logistique","nav.com":"Commercial","nav.con":"Contact",
+    "hero.h1":"Des systèmes qui organisent les entrepôts et vendent tout seuls.",
+    "hero.sub":"Je suis Martín Resnicoff, développeur full stack avec une formation en ingénierie industrielle. Je construis des systèmes pour les opérations logistiques et pour les entreprises qui vendent et servent leurs clients au quotidien : un simulateur 3D d'entrepôt, la prise de rendez-vous par WhatsApp et des bots de vente.",
+    "hero.c1":"Voir les projets","hero.c2":"Parlons-en",
+    "hero.cap":"Entrepôt 3D illustratif. Passez le curseur sur les emplacements.",
+    "log.h":"Systèmes logistiques","log.p":"Pour les opérations qui ont besoin de voir, d'organiser et de tester leur entrepôt avant de déplacer la moindre caisse.",
+    "com.h":"Systèmes commerciaux","com.p":"Pour les entreprises qui servent et vendent chaque jour et veulent le faire avec moins d'appels et moins de tableurs.",
+    "note":"Vue illustrative",
+    "vid.full":"Voir la vidéo complète","vid.close":"Fermer",
+    "p3.t":"Présentation commerciale 3D","p3.tag":"Une proposition que l'on peut voir et tester avant de la signer",
+    "p3.d":"Une proposition d'exploitation construite avec le simulateur, pour un client fictif. Elle résume les besoins du client, compare trois façons d'opérer avec leur coût quotidien, montre l'entrepôt conçu en 3D, simule une journée complète et se termine par l'exploitation recommandée. Les coûts de l'exemple sont illustratifs.",
+    "sim.t":"Simulateur d'entrepôt 3D",
+    "sim.d":"Un outil pour concevoir un entrepôt, simuler une journée complète d'opérations et décider où placer chaque produit. Trois fonctions dans le même projet.",
+    "f1.t":"Conception de l'entrepôt","f1.tag":"Dessinez le bâtiment et voyez combien d'emplacements il compte",
+    "f1.d":"Un assistant pose des questions pas à pas pendant que le bâtiment, les racks et les quais prennent forme. Le résultat s'affiche en 3D en vue isométrique, en plan et en coupe latérale, avec les dimensions, le toit, les murs et les palettes, et il compte les emplacements à chaque rack ajouté. Le projet est enregistré et rouvert plus tard.",
+    "f2.tag":"Essayez une journée complète avant de la vivre",
+    "f2.d":"Chargez les articles, le stock, les temps et les règles, et le simulateur déroule un poste : camions aux quais, préparateurs qui montent les commandes, réapprovisionnement et ruptures. Il calcule les effectifs nécessaires et rejoue la journée en 3D, avec un résumé de la productivité, des temps morts et des camions en retard.",
+    "f3.tag":"Chaque article aussi près du quai que c'est rentable",
+    "f3.d":"Compare le rangement actuel avec un meilleur. Il propose des échanges entre emplacements pour rapprocher du quai les articles les plus prélevés, et n'accepte chaque échange que si ce qu'il économise couvre le coût du déplacement. Il mesure l'avant et l'après avec la simulation et suggère de répartir les articles à faible rotation sur des étagères.",
+    "p6.tag":"Chaque camion à son quai, à l'heure",
+    "p6.d":"Une application pour coordonner l'arrivée des camions dans un entrepôt. Elle gère les rendez-vous, l'enregistrement à l'arrivée et au départ, l'attribution des quais, la file d'attente et les documents requis par chaque opération, avec des utilisateurs par rôle et un tableau de bord.",
+    "tu.name":"Barbier","tu.1":"Bonjour, je voudrais un rendez-vous pour une coupe.",
+    "tu.2":"Bonjour ! J'ai de la place demain à 10h00, 11h30 ou 16h00. Lequel vous convient le mieux ?",
+    "tu.3":"11h30, s'il vous plaît.","tu.4":"C'est réservé. Pour confirmer, réglez l'acompte avec Mercado Pago. Je vous rappellerai 1 heure avant.",
+    "p7.tag":"Les rendez-vous se réservent tout seuls sur WhatsApp",
+    "p7.d":"Une plateforme de rendez-vous pour barbiers, instituts de beauté et professionnels indépendants. Les clients réservent sur WhatsApp ou depuis un lien, voient les créneaux libres par service et par professionnel, versent un acompte avec Mercado Pago et reçoivent un rappel une heure avant. L'entreprise gère son agenda, ses clients et ses succursales depuis un seul panneau.",
+    "p1.tag":"Votre entrepôt, répliqué en direct",
+    "p1.d":"Un modèle numérique de l'entrepôt avec ses racks, ses emplacements et ses mouvements. Voyez ce qui se trouve à chaque emplacement, testez les changements dans le modèle avant de les faire sur le terrain, et décidez le plan sous les yeux.",
+    "p2.tag":"Chaque produit au bon endroit",
+    "p2.d":"Attribue les produits aux emplacements selon leur fréquence de sortie, l'espace qu'ils occupent et leur proximité des quais. Les produits à forte rotation restent à portée de main et les opérateurs marchent moins.",
+    "p3.t":"Présentation 3D de solutions logistiques","p3.tag":"Laissez le client voir la solution avant de signer",
+    "p3.d":"Une présentation 3D interactive qui montre à quoi ressemblerait un entrepôt : implantation, flux et capacité. Elle s'explore à la souris et remplace le plan PDF lors de la réunion commerciale.",
+    "p5.t":"Bot de vente WhatsApp","p5.tag":"Parle à chaque prospect et respecte les désinscriptions",
+    "p5.d":"Un bot qui écrit aux prospects à partir de sa propre base de données, les qualifie, répond aux objections avec des données produit réelles et planifie les relances. Il respecte automatiquement les demandes de désinscription et consigne tout dans un panneau d'administration. Il utilise un modèle de langage d'Anthropic.",
+    "bot.name":"Ventes","bot.on":"en ligne",
+    "bot.1":"Bonjour, je vous écris de la part de Turneador. Nous aidons les barbiers et les instituts de beauté à prendre des rendez-vous sur WhatsApp. Combien de professionnels avez-vous ?",
+    "bot.2":"Nous sommes trois. Et combien ça coûte ?",
+    "bot.3":"Le prix dépend du nombre de professionnels et vous pouvez l'essayer sans frais. Je vous envoie le fonctionnement ?",
+    "con.h":"Un entrepôt ou une opération de vente à organiser ?","con.p":"Dites-moi comment vous travaillez aujourd'hui et voyons ce qui peut être automatisé.",
+    "slot.a":"A rapide","slot.b":"B moyen","slot.c":"C lent","slot.dock":"quais",
+    "tip.occ":"Occupé","tip.pick":"Réservé au picking","tip.move":"En transit"
+  };
   var ES_DYN = {"slot.a":"A rápida","slot.b":"B media","slot.c":"C lenta","slot.dock":"muelles","tip.occ":"Ocupada","tip.pick":"Reservada para picking","tip.move":"En movimiento"};
   var lang = "es";
-  function T(k){ return lang==="en" ? EN[k] : ES_DYN[k]; }
+  var DICT = {en:EN, fr:FR};
+  function T(k){ return lang==="es" ? ES_DYN[k] : DICT[lang][k]; }
+  function L(es,en,fr){ return lang==="en"?en:(lang==="fr"?fr:es); }
   function setLang(l){
     lang = l;
     document.documentElement.lang = l;
     document.querySelectorAll("[data-i]").forEach(function(el){
       if(el.dataset.es === undefined) el.dataset.es = el.textContent;
-      el.textContent = (l==="en" && EN[el.dataset.i]) ? EN[el.dataset.i] : el.dataset.es;
+      var d = DICT[l]; el.textContent = (d && d[el.dataset.i]) ? d[el.dataset.i] : el.dataset.es;
     });
     document.querySelectorAll("#lang span").forEach(function(s){ s.classList.toggle("on", s.dataset.l===l); });
     try{ localStorage.setItem("lang", l); }catch(e){}
@@ -413,7 +458,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   function renderResults(){
     document.querySelectorAll("[data-result]").forEach(function(el){
       var r = CONFIG.results[el.dataset.result];
-      if(r && r.value){ el.classList.add("on"); el.querySelector("strong").textContent=r.value; el.querySelector("span").textContent=(lang==="en"?r.en:r.es)||""; }
+      if(r && r.value){ el.classList.add("on"); el.querySelector("strong").textContent=r.value; el.querySelector("span").textContent=(L(r.es,r.en,r.fr||r.en))||""; }
       else el.classList.remove("on");
     });
   }
@@ -422,7 +467,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
       var k=el.dataset.demo, u=CONFIG.demos[k];
       el.innerHTML = "";
       if(u){ var a=document.createElement("a"); a.className="btn primary"; a.href=u; a.target="_blank"; a.rel="noopener";
-        a.textContent = SITES[k] ? (lang==="en"?"Visit site":"Visitar sitio") : (lang==="en"?"Open demo":"Ver demo"); el.appendChild(a); }
+        a.textContent = SITES[k] ? L("Visitar sitio","Visit site","Visiter le site") : L("Ver demo","Open demo","Voir la démo"); el.appendChild(a); }
     });
   }
   function playVisible(){
@@ -453,7 +498,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     if(c.whatsapp) link(c.whatsapp,"WhatsApp",true);
     if(c.email){
       var b=document.createElement("button"); b.type="button"; b.className="btn"+(c.whatsapp?"":" primary");
-      b.textContent = lang==="en"?"Copy email":"Copiar email";
+      b.textContent = L("Copiar email","Copy email","Copier l'e-mail");
       b.addEventListener("click",function(){ try{ navigator.clipboard.writeText(c.email); }catch(e){} });
       box.appendChild(b);
       var m=document.createElement("span"); m.className="mail"; m.textContent=c.email; box.appendChild(m);
@@ -746,10 +791,10 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   /* ============ Tema e idioma ============ */
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redrawAll);
   new MutationObserver(redrawAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
-  document.getElementById("lang").addEventListener("click",function(){ setLang(lang==="es"?"en":"es"); });
+  document.getElementById("lang").addEventListener("click",function(){ setLang(lang==="es"?"en":(lang==="en"?"fr":"es")); });
 
   var initial="es";
-  try{ var sv=localStorage.getItem("lang"); if(sv==="es"||sv==="en") initial=sv; else if((navigator.language||"").slice(0,2)==="en") initial="en"; }catch(e){}
+  try{ var sv=localStorage.getItem("lang"); var nl=(navigator.language||"").slice(0,2); if(sv==="es"||sv==="en"||sv==="fr") initial=sv; else if(nl==="en"||nl==="fr") initial=nl; }catch(e){}
   renderDemos(); renderVideos();
   setLang(initial);
 })();
