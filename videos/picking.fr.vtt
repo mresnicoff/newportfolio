@@ -1,0 +1,331 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:04.200
+Picking consolidé avec tri en îlot,
+appuyé par des robots AMR.
+
+2
+00:00:04.250 --> 00:00:07.390
+Simulation d'une journée
+complète d'exploitation.
+
+3
+00:00:08.040 --> 00:00:11.760
+Nous construisons une simulation de
+picking consolidé avec tri en îlot,
+
+4
+00:00:11.810 --> 00:00:13.140
+appuyé par des robots AMR,
+
+5
+00:00:13.190 --> 00:00:17.170
+pour générer des économies par rapport au
+même processus avec un picking par
+
+6
+00:00:17.220 --> 00:00:17.590
+magasin.
+
+7
+00:00:18.240 --> 00:00:19.620
+Avec le picking par magasin,
+
+8
+00:00:19.670 --> 00:00:23.500
+un préparateur parcourt l'entrepôt en montant
+la commande de chaque magasin,
+
+9
+00:00:23.550 --> 00:00:26.920
+et le même article est cherché encore et
+encore. Avec le consolidé,
+
+10
+00:00:26.970 --> 00:00:29.730
+chaque article est prélevé une
+seule fois dans le rack,
+
+11
+00:00:29.780 --> 00:00:32.840
+pour tous les magasins ensemble, puis
+réparti dans les îlots.
+
+12
+00:00:33.490 --> 00:00:39.120
+Le cas : 105 magasins, 15 camions de 7
+magasins chacun, 4 rolls par magasin,
+
+13
+00:00:39.170 --> 00:00:45.170
+presque mille articles et plus de neuf mille
+colis. Trois îlots de tri et 10 AMR.
+
+14
+00:00:45.820 --> 00:00:49.810
+Il y a deux types de picking. Le picking de
+palettes : les palettes complètes,
+
+15
+00:00:49.860 --> 00:00:53.070
+d'un seul article, descendues par le
+chariot à mât rétractable.
+
+16
+00:00:53.120 --> 00:00:57.260
+Et le picking de colis consolidé : un
+préparateur monte des palettes consolidées,
+
+17
+00:00:57.310 --> 00:01:01.140
+de plusieurs articles, avec les colis qui ne
+font pas une palette complète.
+
+18
+00:01:01.190 --> 00:01:05.330
+Une palette qui arrive par AMR à l'îlot peut
+être mono-produit ou multi-produits.
+
+19
+00:01:05.980 --> 00:01:06.850
+Voici la journée.
+
+20
+00:01:06.900 --> 00:01:10.630
+Le chariot à mât rétractable descend des
+racks les palettes complètes,
+
+21
+00:01:10.680 --> 00:01:12.630
+le préparateur monte les consolidées,
+
+22
+00:01:12.680 --> 00:01:16.460
+et les AMR les emmènent à la zone de
+transfert, au buffer et aux îlots.
+
+23
+00:01:17.110 --> 00:01:17.540
+À l'îlot,
+
+24
+00:01:17.590 --> 00:01:21.810
+l'opérateur prend chaque article de la palette
+et le répartit dans les rolls des
+
+25
+00:01:21.860 --> 00:01:23.300
+magasins qui l'ont commandé.
+
+26
+00:01:23.350 --> 00:01:26.240
+Une lumière lui indique dans quel
+roll va chaque colis.
+
+27
+00:01:26.290 --> 00:01:30.510
+Un roll est un chariot grillagé à roulettes, et
+chaque magasin en reçoit quatre.
+
+28
+00:01:31.160 --> 00:01:35.120
+Quand un roll est plein, un opérateur le retire
+et laisse un roll vide à sa place.
+
+29
+00:01:35.170 --> 00:01:38.980
+Le roll plein passe par le contrôle de
+préparation, qui vérifie 15 % des rolls,
+
+30
+00:01:39.030 --> 00:01:42.750
+et seulement ensuite il est filmé et placé
+dans la zone de staging du quai du
+
+31
+00:01:42.800 --> 00:01:44.170
+camion qui va le transporter.
+
+32
+00:01:44.820 --> 00:01:47.570
+Et les rolls vides : ils
+n'apparaissent pas par magie.
+
+33
+00:01:47.620 --> 00:01:51.700
+Les camions de distribution rapportent
+aujourd'hui les rolls qu'ils ont emportés
+
+34
+00:01:51.750 --> 00:01:51.960
+hier.
+
+35
+00:01:52.010 --> 00:01:56.310
+Ils arrivent, déchargent sept piles de quatre
+rolls vides, soit 28 rolls par camion,
+
+36
+00:01:56.360 --> 00:01:58.330
+les mêmes qu'ils emportent aujourd'hui,
+
+37
+00:01:58.380 --> 00:02:00.710
+et chargent les rolls pleins
+montés la veille.
+
+38
+00:02:01.360 --> 00:02:03.860
+L'équipe des rolls vides
+nettoie chaque pile,
+
+39
+00:02:03.910 --> 00:02:07.560
+monte les rolls et les amène au stock
+de vides, à côté des îlots.
+
+40
+00:02:07.610 --> 00:02:11.820
+Les opérateurs les prennent là. Si le stock
+s'épuisait, l'îlot attendrait :
+
+41
+00:02:11.870 --> 00:02:14.260
+il n'y a pas de magie avec
+les rolls vides.
+
+42
+00:02:14.310 --> 00:02:18.640
+C'est pourquoi la journée commence avec le
+staging saturé par les chargements
+
+43
+00:02:18.690 --> 00:02:19.030
+d'hier,
+
+44
+00:02:19.080 --> 00:02:20.790
+la condition la plus exigeante.
+
+45
+00:02:21.440 --> 00:02:25.020
+Avec tout cela, la simulation vérifie six
+choses : que le staging ne sature pas,
+
+46
+00:02:25.070 --> 00:02:28.380
+que le buffer ne sature pas, que les îlots
+aient du travail en permanence,
+
+47
+00:02:28.430 --> 00:02:30.190
+que chaque camion soit chargé à l'heure,
+
+48
+00:02:30.240 --> 00:02:33.230
+que chaque camion utilise le quai le
+plus proche de son chargement,
+
+49
+00:02:33.280 --> 00:02:35.860
+et combien de personnes et
+d'équipements sont nécessaires.
+
+50
+00:02:36.510 --> 00:02:42.270
+Le staging a atteint un pic de 464 positions
+occupées et n'a jamais manqué de place.
+
+51
+00:02:42.320 --> 00:02:44.970
+Le buffer a 122 places et a atteint 87.
+
+52
+00:02:45.020 --> 00:02:49.670
+La zone de transfert en a 52 et a atteint
+51 : elle est à la limite.
+
+53
+00:02:49.720 --> 00:02:54.990
+Si une zone se remplissait, la simulation
+s'arrête et signale l'effondrement.
+
+54
+00:02:55.640 --> 00:02:59.570
+Les îlots travaillent presque sans arrêt de
+trois heures de l'après-midi à quatre
+
+55
+00:02:59.620 --> 00:03:00.790
+heures et demie du matin,
+
+56
+00:03:00.840 --> 00:03:02.560
+avec une utilisation d'environ 88 %.
+
+57
+00:03:02.610 --> 00:03:06.380
+Ils ne baissent qu'au changement d'équipe de
+dix heures du soir et pendant une
+
+58
+00:03:06.430 --> 00:03:08.150
+courte pause à deux heures et demie.
+
+59
+00:03:08.800 --> 00:03:12.360
+Le quai optimal : chaque camion va au quai libre
+le plus proche de son chargement,
+
+60
+00:03:12.410 --> 00:03:15.920
+et les chargements sont répartis dans le temps
+pour que chaque camion obtienne le
+
+61
+00:03:15.970 --> 00:03:17.460
+quai proche de ce qu'il transporte.
+
+62
+00:03:18.110 --> 00:03:22.890
+Les 15 camions du matin chargent les rolls
+montés hier, et ceux du lendemain aussi,
+
+63
+00:03:22.940 --> 00:03:26.970
+et tous partent à l'heure : le plus grand
+retard a été de 2,6 minutes,
+
+64
+00:03:27.020 --> 00:03:28.480
+dans la tolérance de cinq.
+
+65
+00:03:29.260 --> 00:03:30.960
+Avec trois équipes de huit heures,
+
+66
+00:03:31.010 --> 00:03:35.030
+sept heures nettes par personne et 15 % de
+majorations incluses dans les temps,
+
+67
+00:03:35.080 --> 00:03:38.380
+la simulation donne l'effectif minimum
+: huit personnes le matin,
+
+68
+00:03:38.430 --> 00:03:41.670
+dix l'après-midi et quinze la nuit. Le
+personnel est polyvalent,
+
+69
+00:03:41.720 --> 00:03:44.510
+et inclut les contrôles de
+réception et de préparation,
+
+70
+00:03:44.560 --> 00:03:48.370
+et les administratifs qui lancent les ordres
+et donnent l'accord de sortie.

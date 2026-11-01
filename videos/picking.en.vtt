@@ -1,0 +1,311 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:04.750
+Consolidated picking with island
+sorting, supported by AMR robots.
+
+2
+00:00:04.800 --> 00:00:07.390
+Simulation of a full day of operation.
+
+3
+00:00:08.040 --> 00:00:11.820
+We are building a simulation of
+consolidated picking with island sorting,
+
+4
+00:00:11.870 --> 00:00:13.080
+supported by AMR robots,
+
+5
+00:00:13.130 --> 00:00:17.170
+to generate savings compared with running the
+same process with store-by-store
+
+6
+00:00:17.220 --> 00:00:17.590
+picking.
+
+7
+00:00:18.240 --> 00:00:19.680
+With store-by-store picking,
+
+8
+00:00:19.730 --> 00:00:22.700
+a picker walks the warehouse
+building each store's order,
+
+9
+00:00:22.750 --> 00:00:26.790
+and the same item is searched for again and
+again. With consolidated picking,
+
+10
+00:00:26.840 --> 00:00:30.610
+each item is taken from the rack only once,
+for all the stores together,
+
+11
+00:00:30.660 --> 00:00:32.840
+and then it is distributed at the islands.
+
+12
+00:00:33.490 --> 00:00:38.360
+The case: 105 stores, 15 trucks of 7
+stores each, 4 rolls per store,
+
+13
+00:00:38.410 --> 00:00:42.710
+almost a thousand items and more than
+nine thousand cartons.
+
+14
+00:00:42.760 --> 00:00:45.170
+Three sorting islands and 10 AMRs.
+
+15
+00:00:45.820 --> 00:00:50.420
+There are two kinds of picking. Pallet
+picking: full single-item pallets,
+
+16
+00:00:50.470 --> 00:00:54.560
+brought down by the reach truck. And
+consolidated carton picking:
+
+17
+00:00:54.610 --> 00:00:56.410
+a picker builds consolidated,
+
+18
+00:00:56.460 --> 00:01:00.680
+multi-item pallets with the cartons that
+do not make a full pallet.
+
+19
+00:01:00.730 --> 00:01:05.330
+A pallet that reaches the island by AMR can
+be single-item or multi-item.
+
+20
+00:01:05.980 --> 00:01:10.410
+This is how the day looks. The reach truck
+brings full pallets down from the racks,
+
+21
+00:01:10.460 --> 00:01:12.570
+the picker builds the consolidated ones,
+
+22
+00:01:12.620 --> 00:01:16.460
+and the AMRs take them to the transfer
+area, the buffer and the islands.
+
+23
+00:01:17.110 --> 00:01:17.890
+At the island,
+
+24
+00:01:17.940 --> 00:01:22.660
+the operator takes each item from the pallet
+and distributes it into the rolls of
+
+25
+00:01:22.710 --> 00:01:24.260
+the stores that ordered it.
+
+26
+00:01:24.310 --> 00:01:29.030
+A light shows which roll each carton goes into.
+A roll is a caged cart on wheels,
+
+27
+00:01:29.080 --> 00:01:30.510
+and each store gets four.
+
+28
+00:01:31.160 --> 00:01:35.290
+When a roll is full, a roll handler removes it
+and leaves an empty one in its place.
+
+29
+00:01:35.340 --> 00:01:39.180
+The full roll goes through the picking check,
+which inspects 15% of the rolls,
+
+30
+00:01:39.230 --> 00:01:43.220
+and only then is it wrapped and left in the
+staging area of the dock of the truck
+
+31
+00:01:43.270 --> 00:01:44.170
+that will carry it.
+
+32
+00:01:44.820 --> 00:01:47.910
+And the empty rolls: they do not
+appear out of nowhere.
+
+33
+00:01:47.960 --> 00:01:52.480
+Today the delivery trucks bring back the rolls
+they took yesterday. They arrive,
+
+34
+00:01:52.530 --> 00:01:56.370
+unload seven stacks of four empty rolls,
+that is 28 rolls per truck,
+
+35
+00:01:56.420 --> 00:02:00.710
+the same ones they take today, and load the
+full rolls built the day before.
+
+36
+00:02:01.360 --> 00:02:03.480
+The empty-roll team cleans each stack,
+
+37
+00:02:03.530 --> 00:02:07.730
+assembles the rolls and takes them to the
+empty stock next to the islands.
+
+38
+00:02:07.780 --> 00:02:12.310
+The operators take them from there. If the
+stock ran out, the island would wait:
+
+39
+00:02:12.360 --> 00:02:14.320
+there is no magic with empty rolls.
+
+40
+00:02:14.370 --> 00:02:18.620
+That is why the day starts with the staging
+area full of yesterday's loads,
+
+41
+00:02:18.670 --> 00:02:20.790
+which is the most demanding condition.
+
+42
+00:02:21.440 --> 00:02:25.320
+With all this, the simulation checks six
+things: that staging does not saturate,
+
+43
+00:02:25.370 --> 00:02:29.000
+that the buffer does not saturate, that the
+islands have work all the time,
+
+44
+00:02:29.050 --> 00:02:30.710
+that every truck is loaded on time,
+
+45
+00:02:30.760 --> 00:02:33.210
+that every truck uses the dock
+closest to its load,
+
+46
+00:02:33.260 --> 00:02:35.860
+and how many people and how much
+equipment are needed.
+
+47
+00:02:36.510 --> 00:02:41.650
+Staging peaked at 464 occupied positions
+and never ran out of space.
+
+48
+00:02:41.700 --> 00:02:47.900
+The buffer has 122 places and reached 87. The
+transfer area has 52 and reached 51:
+
+49
+00:02:47.950 --> 00:02:51.100
+it is at the limit. If any area filled up,
+
+50
+00:02:51.150 --> 00:02:54.990
+the simulation stops and reports
+that it collapsed.
+
+51
+00:02:55.640 --> 00:03:00.650
+The islands work almost non-stop from three in
+the afternoon until four thirty in
+
+52
+00:03:00.700 --> 00:03:01.400
+the morning,
+
+53
+00:03:01.450 --> 00:03:04.900
+at around 88% utilization. They
+only drop at the 10 p.m.
+
+54
+00:03:04.950 --> 00:03:08.150
+shift change and during a short
+break at two thirty.
+
+55
+00:03:08.800 --> 00:03:12.360
+The best dock: each truck goes to the
+free dock closest to its load,
+
+56
+00:03:12.410 --> 00:03:16.610
+and the loads are spread over time so that each
+truck gets the dock that is near
+
+57
+00:03:16.660 --> 00:03:17.460
+what it carries.
+
+58
+00:03:18.110 --> 00:03:20.970
+The 15 morning trucks load the
+rolls built yesterday,
+
+59
+00:03:21.020 --> 00:03:24.750
+and so do the 15 of the following day,
+and all of them leave on time:
+
+60
+00:03:24.800 --> 00:03:28.480
+the longest delay was 2.6 minutes, within
+the five-minute tolerance.
+
+61
+00:03:29.260 --> 00:03:30.760
+With three eight-hour shifts,
+
+62
+00:03:30.810 --> 00:03:34.350
+seven net hours per person and 15%
+allowances built into the times,
+
+63
+00:03:34.400 --> 00:03:38.150
+the simulation gives the minimum staffing:
+eight people in the morning,
+
+64
+00:03:38.200 --> 00:03:41.730
+ten in the afternoon and fifteen at
+night. Staff are multi-skilled,
+
+65
+00:03:41.780 --> 00:03:44.140
+and include the receiving and
+picking checks,
+
+66
+00:03:44.190 --> 00:03:48.370
+and the administrative staff who release the
+orders and give the exit approval.
