@@ -131,6 +131,9 @@ a{color:inherit}
 .tab:hover{color:var(--fg);border-color:var(--fg)}
 .tab[aria-selected="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
 .sim-panel[hidden]{display:none}
+.sim-panel.mapa{grid-template-columns:minmax(0,1fr);gap:24px}
+.mapa-frame{width:100%;height:clamp(520px,80vh,720px);border:1px solid var(--line);border-radius:6px;background:#0e141d;display:block}
+@media (max-width:820px){.mapa-frame{height:640px}}
 .vis video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;background:#000}
 .vis.has-video{aspect-ratio:16/9;background:#000}
 .vis.has-video canvas,.vis.has-video .note{display:none}
@@ -193,13 +196,14 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
       <article id="simulador">
         <header class="proj">
           <h3 class="proj-t" data-i="sim.t">Simulador de depósito 3D</h3>
-          <p class="proj-d" data-i="sim.d">Una herramienta para diseñar un depósito, simular un día completo de operación y decidir dónde conviene tener cada producto. Son cuatro funciones del mismo proyecto.</p>
+          <p class="proj-d" data-i="sim.d">Una herramienta para diseñar un depósito, simular un día completo de operación y decidir dónde conviene tener cada producto. Son cinco funciones del mismo proyecto.</p>
         </header>
         <div class="tabs" role="tablist" aria-label="Funciones del simulador">
           <button class="tab" role="tab" id="tab-diseno" data-tab="diseno" aria-selected="true" data-i="f1.t">Diseño del depósito</button>
           <button class="tab" role="tab" id="tab-twin" data-tab="twin" aria-selected="false">Gemelo Digital</button>
           <button class="tab" role="tab" id="tab-slotting" data-tab="slotting" aria-selected="false">Slotting Master</button>
-          <button class="tab" role="tab" id="tab-picking" data-tab="picking" aria-selected="false" data-i="pk.tab">Sorting con ARMs</button>
+          <button class="tab" role="tab" id="tab-picking" data-tab="picking" aria-selected="false" data-i="pk.tab">Picking consolidado con sorting</button>
+          <button class="tab" role="tab" id="tab-mapa" data-tab="mapa" aria-selected="false" data-i="mp.tab">Mapa de color</button>
         </div>
 
         <div class="case sim-panel" data-panel="diseno" role="tabpanel" aria-labelledby="tab-diseno">
@@ -234,11 +238,20 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
         <div class="case sim-panel" data-panel="picking" role="tabpanel" aria-labelledby="tab-picking" hidden>
           <div class="vis"><video id="vid-picking" muted loop playsinline preload="metadata" hidden></video></div>
           <div>
-            <h3 data-i="pk.h">Sorting con ARMs</h3>
+            <h3 data-i="pk.h">Picking consolidado con sorting</h3>
             <p class="tag" data-i="pk.tag">Cada artículo se saca del rack una sola vez</p>
             <p class="d" data-i="pk.d">Simula un día completo de un picking consolidado con sorting en isla, apoyado por robots AMR, para medir el ahorro frente al picking por sucursal. Verifica que el staging y el buffer no se saturen, que las islas tengan trabajo, que cada camión salga a horario y cuánta gente y cuántos equipos hacen falta.</p>
             <div class="links"><button class="btn" type="button" data-full="picking" data-i="vid.full" hidden>Ver el video completo</button> <a class="btn" href="picking.html" data-i="pk.share">Página para compartir</a></div>
           </div>
+        </div>
+        <div class="case sim-panel mapa" data-panel="mapa" role="tabpanel" aria-labelledby="tab-mapa" hidden>
+          <div>
+            <h3 data-i="mp.h">Mapa de color</h3>
+            <p class="tag" data-i="mp.tag">La rotación de cada producto, a la vista</p>
+            <p class="d" data-i="mp.d">Un depósito 3D de 4.000 posiciones y 400 productos. Se colorea por rotación, por estado (disponible, reservado, por vencer, cuarentena) o por nivel de altura. Al buscar un producto se ve dónde está todo su stock, y al pasar el cursor por cualquier posición aparece qué mercadería es. Los datos son de ejemplo.</p>
+            <div class="links"><button class="btn" type="button" id="mapa-fs" data-i="mp.fs">Pantalla completa</button> <a class="btn" href="mapa-color.html" data-i="mp.page">Abrir en una página aparte</a></div>
+          </div>
+          <iframe id="ifr-mapa" class="mapa-frame" title="Mapa de color del depósito" allow="fullscreen" allowfullscreen></iframe>
         </div>
       </article>
 
@@ -366,7 +379,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "p3.t":"3D sales presentation","p3.tag":"A proposal you can see and test before signing it",
     "p3.d":"An operating proposal built with the simulator, for a sample client. It sums up what the client needs, compares three ways to operate with their daily cost, shows the warehouse designed in 3D, simulates a full day and ends with the recommended operation. The costs in the example are illustrative.",
     "sim.t":"3D warehouse simulator",
-    "sim.d":"A tool to design a warehouse, simulate a full day of operations and decide where each product should sit. Four functions in the same project.",
+    "sim.d":"A tool to design a warehouse, simulate a full day of operations and decide where each product should sit. Five functions in the same project.",
     "f1.t":"Warehouse design","f1.tag":"Lay out the building and see how many slots it has",
     "f1.d":"An assistant asks step by step while the building, racks and docks take shape. It is shown in 3D in isometric, plan and side views, with dimensions, roof, walls and pallets, and it counts slots as each rack is added. The project is saved and reopened later.",
     "f2.tag":"Try a full day before living it",
@@ -374,6 +387,8 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "f3.tag":"Every item as close to the dock as it pays off",
     "f3.d":"Compares the current slotting with a better one. It proposes swaps between slots to bring the most-picked items closer to the dock, and accepts each swap only if what it saves pays for the cost of moving it. It measures before and after with the simulation and suggests splitting slow movers into shelves.",
     "pk.tab":"Consolidated picking with sorting",
+    "mp.tab":"Color map","mp.h":"Color map","mp.tag":"Every product's turnover at a glance","mp.fs":"Full screen","mp.page":"Open on its own page",
+    "mp.d":"A 3D warehouse of 4,000 positions and 400 products. Color it by turnover, by status (available, reserved, near expiry, quarantine) or by height level. Search a product to see where all its stock sits, and hover any position to see what goods it holds. The data is sample data.",
     "pk.h":"Consolidated picking with sorting",
     "pk.tag":"Each item is taken from the rack only once",
     "pk.share":"Shareable page",
@@ -414,7 +429,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "p3.t":"Présentation commerciale 3D","p3.tag":"Une proposition que l'on peut voir et tester avant de la signer",
     "p3.d":"Une proposition d'exploitation construite avec le simulateur, pour un client fictif. Elle résume les besoins du client, compare trois façons d'opérer avec leur coût quotidien, montre l'entrepôt conçu en 3D, simule une journée complète et se termine par l'exploitation recommandée. Les coûts de l'exemple sont illustratifs.",
     "sim.t":"Simulateur d'entrepôt 3D",
-    "sim.d":"Un outil pour concevoir un entrepôt, simuler une journée complète d'opérations et décider où placer chaque produit. Quatre fonctions dans le même projet.",
+    "sim.d":"Un outil pour concevoir un entrepôt, simuler une journée complète d'opérations et décider où placer chaque produit. Cinq fonctions dans le même projet.",
     "f1.t":"Conception de l'entrepôt","f1.tag":"Dessinez le bâtiment et voyez combien d'emplacements il compte",
     "f1.d":"Un assistant pose des questions pas à pas pendant que le bâtiment, les racks et les quais prennent forme. Le résultat s'affiche en 3D en vue isométrique, en plan et en coupe latérale, avec les dimensions, le toit, les murs et les palettes, et il compte les emplacements à chaque rack ajouté. Le projet est enregistré et rouvert plus tard.",
     "f2.tag":"Essayez une journée complète avant de la vivre",
@@ -422,6 +437,8 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "f3.tag":"Chaque article aussi près du quai que c'est rentable",
     "f3.d":"Compare le rangement actuel avec un meilleur. Il propose des échanges entre emplacements pour rapprocher du quai les articles les plus prélevés, et n'accepte chaque échange que si ce qu'il économise couvre le coût du déplacement. Il mesure l'avant et l'après avec la simulation et suggère de répartir les articles à faible rotation sur des étagères.",
     "pk.tab":"Picking consolidé avec tri",
+    "mp.tab":"Carte des couleurs","mp.h":"Carte des couleurs","mp.tag":"La rotation de chaque produit en un coup d'œil","mp.fs":"Plein écran","mp.page":"Ouvrir sur une page à part",
+    "mp.d":"Un entrepôt 3D de 4 000 emplacements et 400 produits. On colore par rotation, par statut (disponible, réservé, péremption proche, quarantaine) ou par niveau de hauteur. En cherchant un produit, on voit où se trouve tout son stock, et en survolant un emplacement on voit quelle marchandise il contient. Les données sont des exemples.",
     "pk.h":"Picking consolidé avec tri",
     "pk.tag":"Chaque article prélevé une seule fois dans le rack",
     "pk.share":"Page à partager",
@@ -465,6 +482,8 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     try{ localStorage.setItem("lang", l); }catch(e){}
     renderResults(); renderDemos(); renderContact(); redrawAll();
     if(typeof applySubs==="function") applySubs();
+    var fi=document.getElementById("ifr-mapa");
+    if(fi && fi.getAttribute("src") && fi.contentWindow){ try{ fi.contentWindow.postMessage({lang:l},location.origin); }catch(e){} }
   }
 
   /* ============ Colores desde los tokens del tema ============ */
@@ -792,6 +811,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   function showTab(k){
     tabs.forEach(function(b){ b.setAttribute("aria-selected", b.dataset.tab===k ? "true":"false"); });
     document.querySelectorAll(".sim-panel").forEach(function(p){ p.hidden = p.dataset.panel!==k; });
+    if(k==="mapa"){ var fm=document.getElementById("ifr-mapa"); if(fm && !fm.getAttribute("src")) fm.src="mapa-color.html?lang="+lang; }
     playVisible();
   }
   tabs.forEach(function(b,i){
@@ -840,7 +860,20 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
   try{ var sv=localStorage.getItem("lang"); var nl=(navigator.language||"").slice(0,2); if(sv==="es"||sv==="en"||sv==="fr") initial=sv; else if(nl==="en"||nl==="fr") initial=nl; }catch(e){}
   renderDemos(); renderVideos();
   setLang(initial);
-  if(location.hash==="#picking"){ showTab("picking"); var _s=document.getElementById("tab-picking"); if(_s&&_s.scrollIntoView) _s.scrollIntoView({block:"center"}); }
+  (function(){
+    var f=document.getElementById("ifr-mapa"), b=document.getElementById("mapa-fs");
+    if(!f||!b) return;
+    function aparte(){ location.href="mapa-color.html?lang="+lang; }
+    b.addEventListener("click",function(){
+      if(f.requestFullscreen){ var p=f.requestFullscreen(); if(p&&p.catch) p.catch(aparte); }
+      else if(f.webkitRequestFullscreen){ f.webkitRequestFullscreen(); }
+      else aparte();
+    });
+    document.addEventListener("fullscreenchange",function(){ if(f.contentWindow) f.contentWindow.postMessage({fs:document.fullscreenElement===f},location.origin); });
+    window.addEventListener("message",function(e){ if(e.origin===location.origin && e.data && e.data.salirFs && document.exitFullscreen) document.exitFullscreen(); });
+  })();
+  var _h=location.hash.replace("#","");
+  if(_h==="picking"||_h==="mapa"){ showTab(_h); var _s=document.getElementById("tab-"+_h); if(_s&&_s.scrollIntoView) _s.scrollIntoView({block:"center"}); }
 })();
 </script>
 </body>
