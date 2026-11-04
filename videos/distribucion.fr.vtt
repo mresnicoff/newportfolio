@@ -1,0 +1,146 @@
+WEBVTT
+
+1
+00:00:00.550 --> 00:00:03.990
+Voici un outil pour calculer le coût
+d'une distribution exclusive :
+
+2
+00:00:04.040 --> 00:00:07.010
+celle qui se fait avec une flotte
+dédiée à un seul client.
+
+3
+00:00:07.060 --> 00:00:08.510
+Avec les commandes d'un mois,
+
+4
+00:00:08.560 --> 00:00:12.730
+il indique quels véhicules seraient sortis
+chaque jour, ce que cela aurait coûté,
+
+5
+00:00:12.780 --> 00:00:14.500
+et ce que vaut chaque colis livré.
+
+6
+00:00:15.150 --> 00:00:19.230
+Il se nourrit de trois éléments. Le
+référentiel d'articles, avec le poids,
+
+7
+00:00:19.280 --> 00:00:23.760
+le volume et les unités par colis de chaque
+produit. Le référentiel de véhicules,
+
+8
+00:00:23.810 --> 00:00:26.270
+avec la capacité en kilos et
+en mètres cubes,
+
+9
+00:00:26.320 --> 00:00:30.410
+la journée de travail et le coût de chaque
+type de camion ou d'utilitaire.
+
+10
+00:00:30.460 --> 00:00:34.880
+Et la liste des commandes à distribuer, avec
+date, adresse, article et quantité.
+
+11
+00:00:35.530 --> 00:00:39.120
+Chaque adresse est placée sur la
+carte. À partir de là,
+
+12
+00:00:39.170 --> 00:00:41.230
+l'outil travaille jour par jour.
+
+13
+00:00:41.880 --> 00:00:42.690
+Pour chaque jour,
+
+14
+00:00:42.740 --> 00:00:46.600
+il rassemble les livraisons et construit les
+tournées en regroupant les arrêts
+
+15
+00:00:46.650 --> 00:00:47.000
+proches.
+
+16
+00:00:47.050 --> 00:00:49.460
+Mais une tournée ne peut pas
+grandir sans limite.
+
+17
+00:00:49.510 --> 00:00:52.370
+Elle est coupée dès qu'on atteint
+l'une de trois limites :
+
+18
+00:00:52.420 --> 00:00:55.330
+les kilos que supporte le véhicule,
+le volume de la caisse,
+
+19
+00:00:55.380 --> 00:00:58.350
+ou la durée de la journée, conduite
+et déchargement compris.
+
+20
+00:00:58.400 --> 00:01:01.510
+Quand plus aucun arrêt ne rentre, une
+nouvelle tournée démarre.
+
+21
+00:01:01.560 --> 00:01:04.820
+Chaque tournée reçoit le véhicule le
+moins cher qui peut la faire,
+
+22
+00:01:04.870 --> 00:01:08.230
+puis l'ordre des arrêts est amélioré pour
+économiser des kilomètres.
+
+23
+00:01:08.880 --> 00:01:13.270
+Voici une journée complète : cinq
+tournées, chacune avec son véhicule,
+
+24
+00:01:13.320 --> 00:01:17.590
+ses arrêts et son coût. Les trajets sont
+tracés sur les vraies rues.
+
+25
+00:01:18.240 --> 00:01:21.630
+Répété pour les vingt-deux jours du
+mois, il donne le coût total,
+
+26
+00:01:21.680 --> 00:01:23.960
+le coût de chaque jour et le
+coût par colis.
+
+27
+00:01:24.010 --> 00:01:28.410
+Et il permet de comparer différentes flottes,
+pour voir laquelle est la moins chère.
+
+28
+00:01:29.540 --> 00:01:31.960
+En ajoutant administration,
+marge et taxes,
+
+29
+00:01:32.010 --> 00:01:35.650
+on obtient la valeur par colis que l'on
+peut proposer au client.
+
+30
+00:01:35.700 --> 00:01:39.040
+Distribution exclusive, calculée
+avant de prendre la route.

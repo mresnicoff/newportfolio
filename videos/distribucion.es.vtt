@@ -1,0 +1,130 @@
+WEBVTT
+
+1
+00:00:00.550 --> 00:00:04.720
+Esta es una herramienta para calcular cuánto
+cuesta una distribución exclusiva:
+
+2
+00:00:04.770 --> 00:00:08.940
+la que se hace con flota dedicada a un solo
+cliente. Con los pedidos de un mes,
+
+3
+00:00:08.990 --> 00:00:12.630
+te dice qué vehículos habrían salido cada
+día, cuánto habría costado,
+
+4
+00:00:12.680 --> 00:00:14.500
+y cuánto vale cada bulto entregado.
+
+5
+00:00:15.150 --> 00:00:19.030
+Se alimenta con tres cosas. El maestro
+de artículos, con el peso,
+
+6
+00:00:19.080 --> 00:00:23.750
+el volumen y las unidades por bulto de cada
+producto. El maestro de vehículos,
+
+7
+00:00:23.800 --> 00:00:26.530
+con la capacidad en kilos y en
+metros cúbicos,
+
+8
+00:00:26.580 --> 00:00:30.040
+la jornada y el costo de cada tipo
+de camión o utilitario.
+
+9
+00:00:30.090 --> 00:00:34.880
+Y el listado de pedidos a distribuir, con
+fecha, dirección, artículo y cantidad.
+
+10
+00:00:35.530 --> 00:00:38.920
+Cada dirección se ubica en el
+mapa. A partir de ahí,
+
+11
+00:00:38.970 --> 00:00:41.230
+la herramienta trabaja día por día.
+
+12
+00:00:41.880 --> 00:00:42.610
+Para cada día,
+
+13
+00:00:42.660 --> 00:00:46.810
+junta las entregas y arma los viajes
+agrupando las paradas que quedan cerca.
+
+14
+00:00:46.860 --> 00:00:49.080
+Pero un viaje no puede crecer sin límite.
+
+15
+00:00:49.130 --> 00:00:53.680
+Se corta apenas se llega a alguno de tres topes:
+los kilos que aguanta el vehículo,
+
+16
+00:00:53.730 --> 00:00:57.940
+el volumen de la caja, o el tiempo de la
+jornada, contando manejo y descarga.
+
+17
+00:00:57.990 --> 00:01:00.820
+Cuando ya no entra otra parada,
+sale un viaje nuevo.
+
+18
+00:01:00.870 --> 00:01:04.360
+A cada viaje le asigna el vehículo más
+barato que puede hacerlo,
+
+19
+00:01:04.410 --> 00:01:08.230
+y después mejora el orden de las paradas
+para gastar menos kilómetros.
+
+20
+00:01:08.880 --> 00:01:13.080
+Así queda un día completo: cinco viajes,
+cada uno con su vehículo,
+
+21
+00:01:13.130 --> 00:01:17.590
+sus paradas y su costo. Los recorridos se
+ven sobre las calles reales.
+
+22
+00:01:18.240 --> 00:01:21.820
+Repetido para los veintidós días del
+mes, da el costo total,
+
+23
+00:01:21.870 --> 00:01:26.600
+el costo de cada día y el costo por bulto. Y
+permite comparar distintas flotas,
+
+24
+00:01:26.650 --> 00:01:28.410
+para ver cuál sale más barata.
+
+25
+00:01:29.540 --> 00:01:32.030
+Sumando administración,
+margen e impuestos,
+
+26
+00:01:32.080 --> 00:01:36.920
+sale el valor por bulto que se le puede ofrecer
+al cliente. Distribución exclusiva,
+
+27
+00:01:36.970 --> 00:01:39.040
+calculada antes de salir a la calle.

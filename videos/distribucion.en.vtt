@@ -1,0 +1,131 @@
+WEBVTT
+
+1
+00:00:00.550 --> 00:00:04.060
+This is a tool to calculate how much an
+exclusive distribution costs:
+
+2
+00:00:04.110 --> 00:00:08.200
+the kind done with a fleet dedicated to a
+single client. With a month of orders,
+
+3
+00:00:08.250 --> 00:00:12.430
+it tells you which vehicles would have gone out
+each day, what it would have cost,
+
+4
+00:00:12.480 --> 00:00:14.500
+and what each delivered carton is worth.
+
+5
+00:00:15.150 --> 00:00:19.040
+It runs on three inputs. The item
+master, with the weight,
+
+6
+00:00:19.090 --> 00:00:23.390
+volume and units per carton of each
+product. The vehicle master,
+
+7
+00:00:23.440 --> 00:00:26.380
+with the capacity in kilos
+and cubic meters,
+
+8
+00:00:26.430 --> 00:00:29.920
+the shift and the cost of each
+type of truck or van.
+
+9
+00:00:29.970 --> 00:00:34.880
+And the list of orders to deliver, with
+date, address, item and quantity.
+
+10
+00:00:35.530 --> 00:00:41.230
+Each address is placed on the map. From
+there, the tool works day by day.
+
+11
+00:00:41.880 --> 00:00:42.570
+For each day,
+
+12
+00:00:42.620 --> 00:00:47.010
+it gathers the deliveries and builds trips by
+grouping the stops that are close
+
+13
+00:00:47.060 --> 00:00:47.520
+together.
+
+14
+00:00:47.570 --> 00:00:49.600
+But a trip cannot grow without limit.
+
+15
+00:00:49.650 --> 00:00:52.530
+It is cut as soon as one of three
+limits is reached:
+
+16
+00:00:52.580 --> 00:00:57.200
+the kilos the vehicle can carry, the volume of
+the box, or the length of the shift,
+
+17
+00:00:57.250 --> 00:01:01.420
+counting driving and unloading. When no
+other stop fits, a new trip starts.
+
+18
+00:01:01.470 --> 00:01:04.290
+Each trip gets the cheapest
+vehicle that can do it,
+
+19
+00:01:04.340 --> 00:01:08.230
+and then the order of the stops is
+improved to spend fewer kilometers.
+
+20
+00:01:08.880 --> 00:01:13.440
+This is what a full day looks like: five
+trips, each with its vehicle,
+
+21
+00:01:13.490 --> 00:01:17.590
+its stops and its cost. The routes are
+drawn over real streets.
+
+22
+00:01:18.240 --> 00:01:22.090
+Repeated for the twenty-two days of the
+month, it gives the total cost,
+
+23
+00:01:22.140 --> 00:01:24.560
+the cost of each day and the
+cost per carton.
+
+24
+00:01:24.610 --> 00:01:28.410
+And it lets you compare different fleets,
+to see which one is cheaper.
+
+25
+00:01:29.540 --> 00:01:31.740
+Adding administration, margin and taxes,
+
+26
+00:01:31.790 --> 00:01:35.330
+it gives the value per carton that can
+be offered to the client.
+
+27
+00:01:35.380 --> 00:01:39.040
+Exclusive distribution, calculated
+before going out on the street.
