@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-230SQF2DL4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-230SQF2DL4');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>YMSPro, oferta especial · Martín Resnicoff</title>
+<meta name="description" content="Sistema de turnos de camiones para depósitos. Sin costo para los primeros depósitos, con calculadora del costo de la espera.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://resnicoff.dev/ymspro-oferta.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Martín Resnicoff">
+<meta property="og:url" content="https://resnicoff.dev/ymspro-oferta.html">
+<meta property="og:title" content="YMSPro, oferta especial: turnos de camiones sin costo">
+<meta property="og:description" content="Menos camiones esperando en la puerta. Calculá cuánto te cuesta hoy la espera.">
+<meta property="og:locale" content="es_AR">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Layout: una columna de lectura (~920px), hero corto, calculadora como pieza central, cierre con contacto. */
+  :root {
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+    --fg: #14202b;
+    --muted: #55657a;
+    --line: #d5dce4;
+    --brand: #1d4f7c;
+    --brand-fg: #ffffff;
+    --signal: #e8a317;
+    --signal-fg: #1b1300;
+    --good: #1f7a4d;
+    --bar-now: #b5453a;
+    --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+      --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f0b43a; --signal-fg: #1b1300;
+      --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+    --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f0b43a; --signal-fg: #1b1300;
+    --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 24px 48px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; display: grid; gap: 40px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: 0.005em; }
+  h1 { font-size: clamp(40px, 8vw, 68px); }
+  h2 { font-size: clamp(28px, 5vw, 38px); }
+  h3 { font-size: 22px; font-weight: 600; }
+  p { margin: 0; }
+  a { color: var(--brand); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: 0.02em; }
+  .brand span { color: var(--signal); }
+  .tag { font-size: 13px; color: var(--muted); }
+  .hero { display: grid; gap: 20px; padding-top: 8px; }
+  .hero p.lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; border: 2px solid var(--brand); }
+  .btn.primary { background: var(--brand); color: var(--brand-fg); }
+  .btn.ghost { color: var(--brand); background: transparent; }
+  .btn:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .feat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .feat p { color: var(--muted); font-size: 15px; }
+  .calc { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 20px; }
+  .calc .sub { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; min-width: 0; }
+  label small { font-weight: 400; color: var(--muted); }
+  input, select {
+    font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--fg); width: 100%; min-width: 0;
+  }
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .res { border-top: 3px solid var(--line); padding-top: 10px; min-width: 0; }
+  .res .n { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.05; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .res .l { font-size: 13px; color: var(--muted); }
+  .res.now { border-color: var(--bar-now); }
+  .res.save { border-color: var(--good); }
+  .res.save .n { color: var(--good); }
+  .bars { display: grid; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
+  .track { background: var(--bg); border-radius: 4px; height: 22px; overflow: hidden; border: 1px solid var(--line); }
+  .fill { height: 100%; min-width: 2px; transition: width 0.3s ease; }
+  .fill.now { background: var(--bar-now); }
+  .fill.after { background: var(--good); }
+  .note { font-size: 13px; color: var(--muted); }
+  .pilot { background: var(--brand); color: var(--brand-fg); border-radius: 10px; padding: 26px; display: grid; gap: 12px; }
+  .pilot h2 { color: var(--brand-fg); }
+  .pilot ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .contact { display: grid; gap: 14px; }
+  .rows { display: grid; gap: 10px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+  .row .k { font-size: 13px; color: var(--muted); min-width: 90px; }
+  .row .v { font-weight: 500; overflow-wrap: anywhere; flex: 1 1 180px; user-select: all; }
+  button.copy { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+  footer { font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">YMS<span>Pro</span></div>
+    <div class="tag">Gestión de turnos de camiones para depósitos</div>
+  </header>
+
+  <section class="hero">
+    <h1>Menos camiones esperando en la puerta.</h1>
+    <p class="lead">Tus proveedores piden el turno de recepción ellos mismos, el depósito controla la documentación en portería y asigna el muelle, y el chofer recibe por WhatsApp a cuál ir. Sin planillas ni llamados.</p>
+    <div class="actions">
+      <a class="btn primary" href="#calculadora">Calcular el costo de la espera</a>
+      <a class="btn ghost" href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a>
+    </div>
+  </section>
+
+  <section class="features" aria-label="Qué incluye">
+    <div class="feat"><h3>Turnos pedidos por el proveedor</h3><p>El proveedor reserva una ventana de recepción. El sistema no permite más reservas que muelles disponibles.</p></div>
+    <div class="feat"><h3>Muelle asignado y aviso por WhatsApp</h3><p>Asignación automática o manual por grupo de muelles. Si no hay uno libre, el camión espera en cola y pasa solo al liberarse. El chofer recibe un WhatsApp con el muelle.</p></div>
+    <div class="feat"><h3>Portería y documentación</h3><p>En el ingreso se verifican los documentos obligatorios del chofer y del camión, y queda registrada la hora de llegada.</p></div>
+    <div class="feat"><h3>Despachos conectados al WMS</h3><p>El sistema se conecta con tu WMS para conocer los camiones que tienen que salir, y registra el check-out con hoja de ruta y precintos.</p></div>
+  </section>
+
+  <section class="calc" id="calculadora">
+    <div>
+      <h2>¿Cuánto cuesta hoy la espera?</h2>
+      <p class="sub">Cargá los datos de tu operación. Los valores iniciales son un ejemplo para que veas cómo funciona.</p>
+    </div>
+    <div class="grid">
+      <label for="camiones">Camiones por día
+        <input id="camiones" type="number" inputmode="decimal" min="0" step="1" value="40">
+      </label>
+      <label for="dias">Días de operación por mes
+        <input id="dias" type="number" inputmode="decimal" min="0" step="1" value="22">
+      </label>
+      <label for="espera">Espera promedio hoy (minutos)
+        <input id="espera" type="number" inputmode="decimal" min="0" step="5" value="90">
+      </label>
+      <label for="objetivo">Espera objetivo con turnos (minutos)
+        <input id="objetivo" type="number" inputmode="decimal" min="0" step="5" value="30">
+      </label>
+      <label for="costo">Costo de un camión parado por hora
+        <input id="costo" type="number" inputmode="decimal" min="0" step="1" value="30">
+      </label>
+      <label for="moneda">Moneda
+        <select id="moneda"><option value="USD">USD</option><option value="ARS">ARS</option></select>
+      </label>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="res now"><div class="n" id="horasHoy">–</div><div class="l">horas de espera por mes hoy</div></div>
+      <div class="res now"><div class="n" id="costoHoy">–</div><div class="l">costo de esa espera por mes</div></div>
+      <div class="res save"><div class="n" id="horasAhorro">–</div><div class="l">horas que se recuperan por mes</div></div>
+      <div class="res save"><div class="n" id="ahorro">–</div><div class="l">ahorro estimado por mes</div></div>
+    </div>
+    <div class="bars" aria-hidden="true">
+      <div class="bar-row"><span>Hoy</span><div class="track"><div class="fill now" id="barHoy" style="width:100%"></div></div></div>
+      <div class="bar-row"><span>Con turnos</span><div class="track"><div class="fill after" id="barDespues" style="width:33%"></div></div></div>
+    </div>
+    <p class="note">Cálculo: camiones por día × días por mes × minutos de espera ÷ 60 × costo por hora. La espera objetivo es un dato que ponés vos; conviene medir la espera real una vez implementado.</p>
+  </section>
+
+  <section class="pilot">
+    <h2>Te lo regalo. Lo que importa es lo que hacemos después.</h2>
+    <ul>
+      <li>YMSPro es una herramienta chica al lado de lo que se puede mejorar en una operación logística. Por eso lo ofrezco sin costo y sin plazo a los primeros depósitos.</li>
+      <li>Mi trabajo es encontrar ahorros y mejoras de proceso en depósitos y distribución, y esos ahorros son mucho mayores que lo que cuesta un sistema de turnos.</li>
+      <li>Lo configuramos juntos y lo usás: así ves cómo trabajo, con números, y después decidís si querés que sigamos con otras mejoras.</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Probalo en tu depósito, sin costo</h2>
+    <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas para operaciones logísticas. Si querés ver YMSPro funcionando en tu depósito, escribime y charlamos 15 minutos para ver cómo lo ponemos en marcha.</p>
+    <div class="rows">
+      <div class="row"><span class="k">Email</span><span class="v" id="vEmail">martin@resnicoff.dev</span><button class="copy" type="button" data-copy="vEmail">Copiar</button></div>
+      <div class="row"><span class="k">WhatsApp</span><span class="v" id="vTel">+54 9 11 2364 3945</span><button class="copy" type="button" data-copy="vTel">Copiar</button></div>
+      <div class="row"><span class="k">Portfolio</span><span class="v"><a href="http://www.resnicoff.dev" target="_blank" rel="noopener">www.resnicoff.dev</a></span></div>
+    </div>
+  </section>
+
+  <footer>YMSPro es un desarrollo propio de Martín Resnicoff · <a href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a> · <a href="/#yms">Ver en el portfolio</a></footer>
+</div>
+
+<script>
+(function () {
+  var ids = ["camiones", "dias", "espera", "objetivo", "costo", "moneda"];
+  var el = {};
+  ids.forEach(function (i) { el[i] = document.getElementById(i); });
+  function num(x) { var v = parseFloat(x.value); return isFinite(v) && v > 0 ? v : 0; }
+  function money(v, cur) {
+    try { return new Intl.NumberFormat("es-AR", { style: "currency", currency: cur, maximumFractionDigits: 0 }).format(v); }
+    catch (e) { return cur + " " + Math.round(v); }
+  }
+  function hours(v) { return new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 }).format(v) + " h"; }
+  function calc() {
+    var cam = num(el.camiones), dias = num(el.dias), esp = num(el.espera), obj = num(el.objetivo), costo = num(el.costo);
+    var cur = el.moneda.value;
+    if (obj > esp) obj = esp;
+    var hHoy = cam * dias * esp / 60;
+    var hObj = cam * dias * obj / 60;
+    var hAh = hHoy - hObj;
+    document.getElementById("horasHoy").textContent = hours(hHoy);
+    document.getElementById("costoHoy").textContent = money(hHoy * costo, cur);
+    document.getElementById("horasAhorro").textContent = hours(hAh);
+    document.getElementById("ahorro").textContent = money(hAh * costo, cur);
+    var pct = esp > 0 ? Math.max(2, Math.round(obj / esp * 100)) : 2;
+    document.getElementById("barHoy").style.width = "100%";
+    document.getElementById("barDespues").style.width = pct + "%";
+  }
+  ids.forEach(function (i) { el[i].addEventListener("input", calc); el[i].addEventListener("change", calc); });
+  calc();
+
+  document.querySelectorAll("button.copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var node = document.getElementById(b.getAttribute("data-copy"));
+      var txt = node.textContent;
+      function selectIt() {
+        var r = document.createRange(); r.selectNodeContents(node);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = "Seleccionado";
+      }
+      try {
+        navigator.clipboard.writeText(txt).then(function () { b.textContent = "Copiado"; }, selectIt);
+      } catch (e) { selectIt(); }
+      setTimeout(function () { b.textContent = "Copiar"; }, 1800);
+    });
+  });
+})();
+</script>
+</body>
+</html>
