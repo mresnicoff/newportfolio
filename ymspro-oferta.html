@@ -13,14 +13,14 @@ gtag('config', 'G-230SQF2DL4');
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>YMSPro, oferta especial · Martín Resnicoff</title>
-<meta name="description" content="Sistema de turnos de camiones para depósitos. Sin costo para los primeros depósitos, con calculadora del costo de la espera.">
+<meta name="description" content="YMSPro: sin Excel, sin llamadas, cada camión a su dock. Sin costo para los primeros depósitos.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://resnicoff.dev/ymspro-oferta.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Martín Resnicoff">
 <meta property="og:url" content="https://resnicoff.dev/ymspro-oferta.html">
-<meta property="og:title" content="YMSPro, oferta especial: turnos de camiones sin costo">
-<meta property="og:description" content="Menos camiones esperando en la puerta. Calculá cuánto te cuesta hoy la espera.">
+<meta property="og:title" content="YMSPro: sin Excel, sin llamadas, cada camión a su dock">
+<meta property="og:description" content="Un depósito ordenado: turnos según tu capacidad, sin staging saturado. Gratis para los primeros depósitos.">
 <meta property="og:locale" content="es_AR">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap">
 <style>
@@ -123,25 +123,27 @@ gtag('config', 'G-230SQF2DL4');
   </header>
 
   <section class="hero">
-    <h1>Menos camiones esperando en la puerta.</h1>
-    <p class="lead">Tus proveedores piden el turno de recepción ellos mismos, el depósito controla la documentación en portería y asigna el muelle, y el chofer recibe por WhatsApp a cuál ir. Sin planillas ni llamados.</p>
+    <h1>Sin Excel. Sin llamadas. Cada camión a su dock.</h1>
+    <p class="lead">YMSPro ordena tu depósito: da los turnos según lo que realmente podés recibir, para que el staging no se sature ni se pierdan camiones por la playa. Un depósito ordenado, con los recursos optimizados y sin demoras para los transportistas.</p>
     <div class="actions">
-      <a class="btn primary" href="#calculadora">Calcular el costo de la espera</a>
+      <a class="btn primary" href="#contacto">Quiero probarlo sin costo</a>
       <a class="btn ghost" href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a>
     </div>
   </section>
 
-  <section class="features" aria-label="Qué incluye">
-    <div class="feat"><h3>Turnos pedidos por el proveedor</h3><p>El proveedor reserva una ventana de recepción. El sistema no permite más reservas que muelles disponibles.</p></div>
-    <div class="feat"><h3>Muelle asignado y aviso por WhatsApp</h3><p>Asignación automática o manual por grupo de muelles. Si no hay uno libre, el camión espera en cola y pasa solo al liberarse. El chofer recibe un WhatsApp con el muelle.</p></div>
-    <div class="feat"><h3>Portería y documentación</h3><p>En el ingreso se verifican los documentos obligatorios del chofer y del camión, y queda registrada la hora de llegada.</p></div>
-    <div class="feat"><h3>Despachos conectados al WMS</h3><p>El sistema se conecta con tu WMS para conocer los camiones que tienen que salir, y registra el check-out con hoja de ruta y precintos.</p></div>
+  <section class="features" aria-label="Qué resuelve">
+    <div class="feat"><h3>Sin Excel</h3><p>El sistema da los turnos según la capacidad del depósito. El staging no se satura.</p></div>
+    <div class="feat"><h3>Sin llamadas al depósito</h3><p>El proveedor reserva solo. Los viajes de salida llegan desde el WMS.</p></div>
+    <div class="feat"><h3>Sin llamadas a los transportistas</h3><p>El aviso del dock sale automático por WhatsApp. El depósito no maneja teléfonos.</p></div>
+    <div class="feat"><h3>Sin camiones perdidos</h3><p>Check-in, cola y dock registrados: cada camión tiene un lugar y un estado.</p></div>
+    <div class="feat"><h3>Con evidencia</h3><p>Tiempos por etapa, SLA y multas a los proveedores que no respetan su slot.</p></div>
+    <div class="feat"><h3>Resultado</h3><p>Un depósito ordenado, sin staging saturado, con los recursos optimizados y sin demoras para los transportistas.</p></div>
   </section>
 
   <section class="calc" id="calculadora">
     <div>
-      <h2>¿Cuánto cuesta hoy la espera?</h2>
-      <p class="sub">Cargá los datos de tu operación. Los valores iniciales son un ejemplo para que veas cómo funciona.</p>
+      <h2>Y las demoras bajan: ¿cuánto cuesta hoy la espera?</h2>
+      <p class="sub">Con todo ordenado, la espera se reduce. Cargá los datos de tu operación para estimarlo; los valores iniciales son un ejemplo.</p>
     </div>
     <div class="grid">
       <label for="camiones">Camiones por día
@@ -153,7 +155,7 @@ gtag('config', 'G-230SQF2DL4');
       <label for="espera">Espera promedio hoy (minutos)
         <input id="espera" type="number" inputmode="decimal" min="0" step="5" value="90">
       </label>
-      <label for="objetivo">Espera objetivo con turnos (minutos)
+      <label for="objetivo">Espera objetivo con YMSPro (minutos)
         <input id="objetivo" type="number" inputmode="decimal" min="0" step="5" value="30">
       </label>
       <label for="costo">Costo de un camión parado por hora
@@ -171,7 +173,7 @@ gtag('config', 'G-230SQF2DL4');
     </div>
     <div class="bars" aria-hidden="true">
       <div class="bar-row"><span>Hoy</span><div class="track"><div class="fill now" id="barHoy" style="width:100%"></div></div></div>
-      <div class="bar-row"><span>Con turnos</span><div class="track"><div class="fill after" id="barDespues" style="width:33%"></div></div></div>
+      <div class="bar-row"><span>Con YMSPro</span><div class="track"><div class="fill after" id="barDespues" style="width:33%"></div></div></div>
     </div>
     <p class="note">Cálculo: camiones por día × días por mes × minutos de espera ÷ 60 × costo por hora. La espera objetivo es un dato que ponés vos; conviene medir la espera real una vez implementado.</p>
   </section>
@@ -185,7 +187,7 @@ gtag('config', 'G-230SQF2DL4');
     </ul>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contacto">
     <h2>Probalo en tu depósito, sin costo</h2>
     <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas para operaciones logísticas. Si querés ver YMSPro funcionando en tu depósito, escribime y charlamos 15 minutos para ver cómo lo ponemos en marcha.</p>
     <div class="rows">
