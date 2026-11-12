@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-230SQF2DL4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-230SQF2DL4');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Simulación gratis para tu próxima propuesta · Martín Resnicoff</title>
+<meta name="description" content="Simulación 3D con video de la operación de tu cliente, sin costo y con cupo limitado.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://resnicoff.dev/simulacion-oferta.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Martín Resnicoff">
+<meta property="og:url" content="https://resnicoff.dev/simulacion-oferta.html">
+<meta property="og:title" content="Que tu cliente vea que entendiste su operación">
+<meta property="og:description" content="Simulación 3D con video, sin costo. Cupo limitado.">
+<meta property="og:locale" content="es_AR">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Layout: una columna de lectura (~920px), hero corto, calculadora como pieza central, cierre con contacto. */
+  :root {
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+    --fg: #14202b;
+    --muted: #55657a;
+    --line: #d5dce4;
+    --brand: #1d4f7c;
+    --brand-fg: #ffffff;
+    --signal: #c4780a;
+    --signal-fg: #1b1300;
+    --good: #1f7a4d;
+    --bar-now: #b5453a;
+    --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+      --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f3aa3c; --signal-fg: #1b1300;
+      --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+    --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f3aa3c; --signal-fg: #1b1300;
+    --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 24px 48px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; display: grid; gap: 40px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 800; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: 0.005em; }
+  h1 { font-size: clamp(40px, 8vw, 68px); }
+  h2 { font-size: clamp(28px, 5vw, 38px); }
+  h3 { font-size: 22px; font-weight: 600; }
+  p { margin: 0; }
+  a { color: var(--brand); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: 0.02em; }
+  .brand span { color: var(--signal); }
+  .tag { font-size: 13px; color: var(--muted); }
+  .hero { display: grid; gap: 20px; padding-top: 8px; }
+  .hero p.lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; border: 2px solid var(--brand); }
+  .btn.primary { background: var(--brand); color: var(--brand-fg); }
+  .btn.ghost { color: var(--brand); background: transparent; }
+  .btn:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .feat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .feat p { color: var(--muted); font-size: 15px; }
+  .calc { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 20px; }
+  .calc .sub { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; min-width: 0; }
+  label small { font-weight: 400; color: var(--muted); }
+  input, select {
+    font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--fg); width: 100%; min-width: 0;
+  }
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .res { border-top: 3px solid var(--line); padding-top: 10px; min-width: 0; }
+  .res .n { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.05; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .res .l { font-size: 13px; color: var(--muted); }
+  .res.now { border-color: var(--bar-now); }
+  .res.save { border-color: var(--good); }
+  .res.save .n { color: var(--good); }
+  .bars { display: grid; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
+  .track { background: var(--bg); border-radius: 4px; height: 22px; overflow: hidden; border: 1px solid var(--line); }
+  .fill { height: 100%; min-width: 2px; transition: width 0.3s ease; }
+  .fill.now { background: var(--bar-now); }
+  .fill.after { background: var(--good); }
+  .note { font-size: 13px; color: var(--muted); }
+  .pilot { background: var(--brand); color: var(--brand-fg); border-radius: 10px; padding: 26px; display: grid; gap: 12px; }
+  .pilot h2 { color: var(--brand-fg); }
+  .pilot ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .contact { display: grid; gap: 14px; }
+  .rows { display: grid; gap: 10px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+  .row .k { font-size: 13px; color: var(--muted); min-width: 90px; }
+  .row .v { font-weight: 500; overflow-wrap: anywhere; flex: 1 1 180px; user-select: all; }
+  button.copy { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+  footer { font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+  .urg{display:inline-block;background:var(--signal);color:var(--signal-fg);font-weight:600;font-size:13px;padding:4px 10px;border-radius:4px;letter-spacing:.02em}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;counter-reset:s}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start;counter-increment:s}
+  .step h3::before{content:counter(s) ". ";color:var(--signal)}
+  .step p{color:var(--muted);font-size:15px}
+  video{width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;display:block}
+  .vid{display:grid;gap:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Martín <span>Resnicoff</span></div>
+    <div class="tag">Simulación 3D de operaciones logísticas</div>
+  </header>
+
+  <section class="hero">
+    <span class="urg">Cupo limitado · se asigna por orden de llegada</span>
+    <h1>Que tu cliente vea que entendiste su operación.</h1>
+    <p class="lead">Te armo gratis una simulación 3D de la operación de tu próximo cliente, con un video para presentarle la propuesta: cómo trabajaría el depósito, qué opciones hay y cuánto cuesta cada una por día.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contacto">Quiero mi simulación gratis</a>
+      <a class="btn ghost" href="#ejemplo">Ver un ejemplo</a>
+    </div>
+  </section>
+
+  <section class="features" aria-label="Qué incluye">
+    <div class="feat"><h3>Se ve, no solo se lee</h3><p>El depósito diseñado en 3D y un día completo de operación simulado: camiones en los docks, preparación de pedidos, reposición.</p></div>
+    <div class="feat"><h3>Opciones con su costo</h3><p>Compara tres formas de operar con su costo por día, para que el cliente elija con números.</p></div>
+    <div class="feat"><h3>Video listo para presentar</h3><p>Lo recibís en video, para mandar o proyectar en la reunión con tu cliente.</p></div>
+    <div class="feat"><h3>Operación recomendada</h3><p>Cierra con la operación que conviene y por qué: una propuesta que muestra que optimizaste su operación.</p></div>
+  </section>
+
+  <section class="vid" id="ejemplo">
+    <h2>Un ejemplo: propuesta comercial armada con el simulador</h2>
+    <video controls preload="none" poster="videos/presentacion.jpg" src="videos/presentacion-completo.mp4"></video>
+    <p class="note">Cliente de ejemplo; los costos son ilustrativos.</p>
+  </section>
+
+  <section class="steps" aria-label="Cómo trabajamos">
+    <div class="step"><h3>Me contás la operación</h3><p>Qué mueve tu cliente, con qué volúmenes y qué necesita. Charlamos 15 minutos.</p></div>
+    <div class="step"><h3>Armo la simulación</h3><p>Diseño el depósito, simulo la operación y comparo las alternativas.</p></div>
+    <div class="step"><h3>Presentás con video</h3><p>Te entrego el video para tu propuesta. Si querés ajustes, lo vemos juntos.</p></div>
+  </section>
+
+  <section class="pilot">
+    <h2>Sin costo, para que veas cómo trabajo.</h2>
+    <ul>
+      <li>La simulación es una herramienta propia: la uso para diseñar operaciones y para vender propuestas.</li>
+      <li>Cupo limitado: tomo pocos casos a la vez para hacerlos bien, por orden de llegada.</li>
+      <li>Si te sirve, después vemos cómo seguimos con otras propuestas.</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contacto">
+    <h2>Escribime ahora, el cupo es limitado</h2>
+    <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas de simulación para operaciones logísticas. Escribime o llamame hoy y charlamos 15 minutos sobre el próximo cliente que quieras ganar.</p>
+    <div class="rows">
+      <div class="row"><span class="k">Email</span><span class="v" id="vEmail">martin@resnicoff.dev</span><button class="copy" type="button" data-copy="vEmail">Copiar</button></div>
+      <div class="row"><span class="k">WhatsApp</span><span class="v" id="vTel">+54 9 11 2364 3945</span><button class="copy" type="button" data-copy="vTel">Copiar</button></div>
+      <div class="row"><span class="k">Portfolio</span><span class="v"><a href="http://www.resnicoff.dev" target="_blank" rel="noopener">www.resnicoff.dev</a></span></div>
+    </div>
+  </section>
+
+  <footer>Simulador de depósito 3D · desarrollo propio de Martín Resnicoff · <a href="/#simulador">Ver en el portfolio</a></footer>
+</div>
+<script>
+(function () {
+  document.querySelectorAll("button.copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var node = document.getElementById(b.getAttribute("data-copy"));
+      var txt = node.textContent;
+      function selectIt() {
+        var r = document.createRange(); r.selectNodeContents(node);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = "Seleccionado";
+      }
+      try {
+        navigator.clipboard.writeText(txt).then(function () { b.textContent = "Copiado"; }, selectIt);
+      } catch (e) { selectIt(); }
+      setTimeout(function () { b.textContent = "Copiar"; }, 1800);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

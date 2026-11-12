@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-230SQF2DL4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-230SQF2DL4');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tu socio para ordenar la operación · YMSPro · Martín Resnicoff</title>
+<meta name="description" content="YMSPro sin costo para 5 depósitos, con un socio que pone las manos que faltan.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://resnicoff.dev/ymspro-socio.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Martín Resnicoff">
+<meta property="og:url" content="https://resnicoff.dev/ymspro-socio.html">
+<meta property="og:title" content="Tu socio para llevar la operación a donde sabés que tiene que estar">
+<meta property="og:description" content="YMSPro sin costo para los primeros 5 depósitos. Cupo limitado.">
+<meta property="og:locale" content="es_AR">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Layout: una columna de lectura (~920px), hero corto, calculadora como pieza central, cierre con contacto. */
+  :root {
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+    --fg: #14202b;
+    --muted: #55657a;
+    --line: #d5dce4;
+    --brand: #1d4f7c;
+    --brand-fg: #ffffff;
+    --signal: #c4780a;
+    --signal-fg: #1b1300;
+    --good: #1f7a4d;
+    --bar-now: #b5453a;
+    --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+      --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f3aa3c; --signal-fg: #1b1300;
+      --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f171f; --surface: #16212c; --fg: #e8eef4; --muted: #9db0c4; --line: #2a3a4a;
+    --brand: #6fb0e6; --brand-fg: #08131c; --signal: #f3aa3c; --signal-fg: #1b1300;
+    --good: #58c58f; --bar-now: #e0786d; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 24px 48px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; display: grid; gap: 40px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 800; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: 0.005em; }
+  h1 { font-size: clamp(40px, 8vw, 68px); }
+  h2 { font-size: clamp(28px, 5vw, 38px); }
+  h3 { font-size: 22px; font-weight: 600; }
+  p { margin: 0; }
+  a { color: var(--brand); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: 0.02em; }
+  .brand span { color: var(--signal); }
+  .tag { font-size: 13px; color: var(--muted); }
+  .hero { display: grid; gap: 20px; padding-top: 8px; }
+  .hero p.lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; border: 2px solid var(--brand); }
+  .btn.primary { background: var(--brand); color: var(--brand-fg); }
+  .btn.ghost { color: var(--brand); background: transparent; }
+  .btn:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .feat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .feat p { color: var(--muted); font-size: 15px; }
+  .calc { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 20px; }
+  .calc .sub { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; min-width: 0; }
+  label small { font-weight: 400; color: var(--muted); }
+  input, select {
+    font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--fg); width: 100%; min-width: 0;
+  }
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .res { border-top: 3px solid var(--line); padding-top: 10px; min-width: 0; }
+  .res .n { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.05; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .res .l { font-size: 13px; color: var(--muted); }
+  .res.now { border-color: var(--bar-now); }
+  .res.save { border-color: var(--good); }
+  .res.save .n { color: var(--good); }
+  .bars { display: grid; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
+  .track { background: var(--bg); border-radius: 4px; height: 22px; overflow: hidden; border: 1px solid var(--line); }
+  .fill { height: 100%; min-width: 2px; transition: width 0.3s ease; }
+  .fill.now { background: var(--bar-now); }
+  .fill.after { background: var(--good); }
+  .note { font-size: 13px; color: var(--muted); }
+  .pilot { background: var(--brand); color: var(--brand-fg); border-radius: 10px; padding: 26px; display: grid; gap: 12px; }
+  .pilot h2 { color: var(--brand-fg); }
+  .pilot ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .contact { display: grid; gap: 14px; }
+  .rows { display: grid; gap: 10px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+  .row .k { font-size: 13px; color: var(--muted); min-width: 90px; }
+  .row .v { font-weight: 500; overflow-wrap: anywhere; flex: 1 1 180px; user-select: all; }
+  button.copy { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+  footer { font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+  .urg{display:inline-block;background:var(--signal);color:var(--signal-fg);font-weight:600;font-size:13px;padding:4px 10px;border-radius:4px;letter-spacing:.02em}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;counter-reset:s}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start;counter-increment:s}
+  .step h3::before{content:counter(s) ". ";color:var(--signal)}
+  .step p{color:var(--muted);font-size:15px}
+  video{width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;display:block}
+  .vid{display:grid;gap:10px}
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .path{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:10px;align-content:start}
+  .path .big{font-family:var(--font-display);font-weight:800;font-size:26px;line-height:1.1;color:var(--brand)}
+  .path p{color:var(--muted)}
+  .path .big{color:var(--brand)}
+  .path .btn{justify-self:start;margin-top:4px}
+  .chip{justify-self:start;background:var(--signal);color:var(--signal-fg);font-size:12px;font-weight:600;padding:3px 9px;border-radius:4px}
+  .lead2{color:var(--muted);max-width:62ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">YMS<span>Pro</span></div>
+    <div class="tag">Por Martín Resnicoff · ingeniero industrial</div>
+  </header>
+
+  <section class="hero">
+    <span class="urg">Cupo limitado · 5 depósitos</span>
+    <h1>Tu socio para llevar la operación a donde sabés que tiene que estar.</h1>
+    <p class="lead">El día a día te come el tiempo y no hay recursos para mejorar lo que ya sabés que hay que mejorar. Yo soy ese recurso que te falta. Para empezar a trabajar juntos, sin costo, hay dos caminos según lo que tengas hoy.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contacto">Hablemos 15 minutos</a>
+    </div>
+  </section>
+
+  <section aria-label="Cómo empezamos" style="display:grid;gap:16px">
+    <h2>Cómo empezamos</h2>
+    <div class="paths">
+      <div class="path">
+        <span class="chip">Camino 1</span>
+        <h3>No tenés un YMS</h3>
+        <p class="big">Te regalo YMSPro.</p>
+        <p>Es un YMS (sistema de gestión de playa) que ordena los turnos de camiones y los docks de tu depósito. Sin costo y sin plazo para los primeros 5 depósitos. Lo configuramos juntos y lo dejo andando.</p>
+        <a class="btn primary" href="#ymspro">Ver qué es YMSPro</a>
+      </div>
+      <div class="path">
+        <span class="chip">Camino 2</span>
+        <h3>Ya tenés un YMS</h3>
+        <p class="big">Armamos un gemelo digital de tu operación.</p>
+        <p>Con tus datos simulamos una jornada completa en 3D y buscamos juntos oportunidades de mejora. Sin costo, para que veas cómo trabajo.</p>
+        <a class="btn ghost" href="/#simulador">Ver el simulador</a>
+      </div>
+    </div>
+    <p class="note">En los dos casos pasa lo mismo: empezamos sin costo, vemos resultados, y después decidís si seguimos con otras mejoras.</p>
+  </section>
+
+  <section id="ymspro" style="display:grid;gap:20px">
+    <h2>Qué es YMSPro</h2>
+    <p class="lead2">YMSPro es un YMS (Yard Management System), un sistema de gestión de playa que permite dar turnos a los proveedores según tu capacidad, controlar el check-in y los documentos, asignar docks, avisar a los choferes por WhatsApp y medir los tiempos de cada camión hasta su salida.</p>
+    <div class="features" aria-label="Qué resuelve YMSPro">
+      <div class="feat"><h3>Sin Excel</h3><p>El sistema da los turnos según la capacidad del depósito. El staging no se satura.</p></div>
+      <div class="feat"><h3>Sin llamadas al depósito</h3><p>El proveedor reserva solo. Los viajes de salida llegan desde el WMS.</p></div>
+      <div class="feat"><h3>Sin llamadas a los transportistas</h3><p>El aviso del dock sale automático por WhatsApp. El depósito no maneja teléfonos.</p></div>
+      <div class="feat"><h3>Sin camiones perdidos</h3><p>Check-in, cola y dock registrados: cada camión tiene un lugar y un estado.</p></div>
+      <div class="feat"><h3>Dock automático o manual</h3><p>La asignación es configurable: automática, o manual si así lo querés.</p></div>
+      <div class="feat"><h3>Con evidencia</h3><p>Tiempos por etapa, SLA y multas a los proveedores que no respetan su slot.</p></div>
+    </div>
+    <div class="vid">
+      <video controls preload="none" src="videos/ymspro-video.mp4"></video>
+      <p class="note">Mirá cómo funciona (1:47).</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <h2>Charlemos 15 minutos, el cupo es limitado</h2>
+    <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas para operaciones logísticas. Escribime o llamame hoy: contame qué tenés hoy y vemos por cuál de los dos caminos empezamos.</p>
+    <div class="rows">
+      <div class="row"><span class="k">Email</span><span class="v" id="vEmail">martin@resnicoff.dev</span><button class="copy" type="button" data-copy="vEmail">Copiar</button></div>
+      <div class="row"><span class="k">WhatsApp</span><span class="v" id="vTel">+54 9 11 2364 3945</span><button class="copy" type="button" data-copy="vTel">Copiar</button></div>
+      <div class="row"><span class="k">Portfolio</span><span class="v"><a href="http://www.resnicoff.dev" target="_blank" rel="noopener">www.resnicoff.dev</a></span></div>
+    </div>
+  </section>
+
+  <footer>YMSPro es un desarrollo propio de Martín Resnicoff · <a href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a> · <a href="/#yms">Ver en el portfolio</a></footer>
+</div>
+<script>
+(function () {
+  document.querySelectorAll("button.copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var node = document.getElementById(b.getAttribute("data-copy"));
+      var txt = node.textContent;
+      function selectIt() {
+        var r = document.createRange(); r.selectNodeContents(node);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = "Seleccionado";
+      }
+      try {
+        navigator.clipboard.writeText(txt).then(function () { b.textContent = "Copiado"; }, selectIt);
+      } catch (e) { selectIt(); }
+      setTimeout(function () { b.textContent = "Copiar"; }, 1800);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
