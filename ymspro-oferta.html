@@ -12,15 +12,15 @@ gtag('config', 'G-230SQF2DL4');
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>YMSPro, oferta especial · Martín Resnicoff</title>
-<meta name="description" content="YMSPro: sin Excel, sin llamadas, cada camión a su dock. Sin costo para los primeros depósitos.">
+<title>Tu socio para ordenar la operación · YMSPro · Martín Resnicoff</title>
+<meta name="description" content="YMSPro sin costo para 5 depósitos, con un socio que pone las manos que faltan.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://resnicoff.dev/ymspro-oferta.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Martín Resnicoff">
 <meta property="og:url" content="https://resnicoff.dev/ymspro-oferta.html">
-<meta property="og:title" content="YMSPro: sin Excel, sin llamadas, cada camión a su dock">
-<meta property="og:description" content="Un depósito ordenado: turnos según tu capacidad, sin staging saturado. Gratis para los primeros depósitos.">
+<meta property="og:title" content="Tu socio para llevar la operación a donde sabés que tiene que estar">
+<meta property="og:description" content="YMSPro sin costo para los primeros 5 depósitos. Cupo limitado.">
 <meta property="og:locale" content="es_AR">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap">
 <style>
@@ -113,83 +113,80 @@ gtag('config', 'G-230SQF2DL4');
   button.copy { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
   footer { font-size: 13px; color: var(--muted); }
   @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+  .urg{display:inline-block;background:var(--signal);color:var(--signal-fg);font-weight:600;font-size:13px;padding:4px 10px;border-radius:4px;letter-spacing:.02em}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;counter-reset:s}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start;counter-increment:s}
+  .step h3::before{content:counter(s) ". ";color:var(--signal)}
+  .step p{color:var(--muted);font-size:15px}
+  video{width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;display:block}
+  .vid{display:grid;gap:10px}
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .path{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:10px;align-content:start}
+  .path .big{font-family:var(--font-display);font-weight:800;font-size:26px;line-height:1.1;color:var(--brand)}
+  .path p{color:var(--muted)}
+  .path .big{color:var(--brand)}
+  .path .btn{justify-self:start;margin-top:4px}
+  .chip{justify-self:start;background:var(--signal);color:var(--signal-fg);font-size:12px;font-weight:600;padding:3px 9px;border-radius:4px}
+  .lead2{color:var(--muted);max-width:62ch}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <div class="brand">YMS<span>Pro</span></div>
-    <div class="tag">Gestión de turnos de camiones para depósitos</div>
+    <div class="tag">Por Martín Resnicoff · ingeniero industrial</div>
   </header>
 
   <section class="hero">
-    <h1>Sin Excel. Sin llamadas. Cada camión a su dock.</h1>
-    <p class="lead">YMSPro ordena tu depósito: da los turnos según lo que realmente podés recibir, para que el staging no se sature ni se pierdan camiones por la playa. Un depósito ordenado, con los recursos optimizados y sin demoras para los transportistas.</p>
+    <span class="urg">Cupo limitado · 5 depósitos</span>
+    <h1>Tu socio para llevar la operación a donde sabés que tiene que estar.</h1>
+    <p class="lead">El día a día te come el tiempo y no hay recursos para mejorar lo que ya sabés que hay que mejorar. Yo soy ese recurso que te falta. Para empezar a trabajar juntos, sin costo, hay dos caminos según lo que tengas hoy.</p>
     <div class="actions">
-      <a class="btn primary" href="#contacto">Quiero probarlo sin costo</a>
-      <a class="btn ghost" href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a>
+      <a class="btn primary" href="#contacto">Hablemos 15 minutos</a>
     </div>
   </section>
 
-  <section class="features" aria-label="Qué resuelve">
-    <div class="feat"><h3>Sin Excel</h3><p>El sistema da los turnos según la capacidad del depósito. El staging no se satura.</p></div>
-    <div class="feat"><h3>Sin llamadas al depósito</h3><p>El proveedor reserva solo. Los viajes de salida llegan desde el WMS.</p></div>
-    <div class="feat"><h3>Sin llamadas a los transportistas</h3><p>El aviso del dock sale automático por WhatsApp. El depósito no maneja teléfonos.</p></div>
-    <div class="feat"><h3>Sin camiones perdidos</h3><p>Check-in, cola y dock registrados: cada camión tiene un lugar y un estado.</p></div>
-    <div class="feat"><h3>Con evidencia</h3><p>Tiempos por etapa, SLA y multas a los proveedores que no respetan su slot.</p></div>
-    <div class="feat"><h3>Resultado</h3><p>Un depósito ordenado, sin staging saturado, con los recursos optimizados y sin demoras para los transportistas.</p></div>
+  <section aria-label="Cómo empezamos" style="display:grid;gap:16px">
+    <h2>Cómo empezamos</h2>
+    <div class="paths">
+      <div class="path">
+        <span class="chip">Camino 1</span>
+        <h3>No tenés un YMS</h3>
+        <p class="big">Te regalo YMSPro.</p>
+        <p>Es un YMS (sistema de gestión de playa) que ordena los turnos de camiones y los docks de tu depósito. Sin costo y sin plazo para los primeros 5 depósitos. Lo configuramos juntos y lo dejo andando.</p>
+        <a class="btn primary" href="#ymspro">Ver qué es YMSPro</a>
+      </div>
+      <div class="path">
+        <span class="chip">Camino 2</span>
+        <h3>Ya tenés un YMS</h3>
+        <p class="big">Armamos un gemelo digital de tu operación.</p>
+        <p>Con tus datos simulamos una jornada completa en 3D y buscamos juntos oportunidades de mejora. Sin costo, para que veas cómo trabajo.</p>
+        <a class="btn ghost" href="/#simulador">Ver el simulador</a>
+      </div>
+    </div>
+    <p class="note">En los dos casos pasa lo mismo: empezamos sin costo, vemos resultados, y después decidís si seguimos con otras mejoras.</p>
   </section>
 
-  <section class="calc" id="calculadora">
-    <div>
-      <h2>Y las demoras bajan: ¿cuánto cuesta hoy la espera?</h2>
-      <p class="sub">Con todo ordenado, la espera se reduce. Cargá los datos de tu operación para estimarlo; los valores iniciales son un ejemplo.</p>
+  <section id="ymspro" style="display:grid;gap:20px">
+    <h2>Qué es YMSPro</h2>
+    <p class="lead2">YMSPro es un YMS (Yard Management System), un sistema de gestión de playa que permite dar turnos a los proveedores según tu capacidad, controlar el check-in y los documentos, asignar docks, avisar a los choferes por WhatsApp y medir los tiempos de cada camión hasta su salida.</p>
+    <div class="features" aria-label="Qué resuelve YMSPro">
+      <div class="feat"><h3>Sin Excel</h3><p>El sistema da los turnos según la capacidad del depósito. El staging no se satura.</p></div>
+      <div class="feat"><h3>Sin llamadas al depósito</h3><p>El proveedor reserva solo. Los viajes de salida llegan desde el WMS.</p></div>
+      <div class="feat"><h3>Sin llamadas a los transportistas</h3><p>El aviso del dock sale automático por WhatsApp. El depósito no maneja teléfonos.</p></div>
+      <div class="feat"><h3>Sin camiones perdidos</h3><p>Check-in, cola y dock registrados: cada camión tiene un lugar y un estado.</p></div>
+      <div class="feat"><h3>Dock automático o manual</h3><p>La asignación es configurable: automática, o manual si así lo querés.</p></div>
+      <div class="feat"><h3>Con evidencia</h3><p>Tiempos por etapa, SLA y multas a los proveedores que no respetan su slot.</p></div>
     </div>
-    <div class="grid">
-      <label for="camiones">Camiones por día
-        <input id="camiones" type="number" inputmode="decimal" min="0" step="1" value="40">
-      </label>
-      <label for="dias">Días de operación por mes
-        <input id="dias" type="number" inputmode="decimal" min="0" step="1" value="22">
-      </label>
-      <label for="espera">Espera promedio hoy (minutos)
-        <input id="espera" type="number" inputmode="decimal" min="0" step="5" value="90">
-      </label>
-      <label for="objetivo">Espera objetivo con YMSPro (minutos)
-        <input id="objetivo" type="number" inputmode="decimal" min="0" step="5" value="30">
-      </label>
-      <label for="costo">Costo de un camión parado por hora
-        <input id="costo" type="number" inputmode="decimal" min="0" step="1" value="30">
-      </label>
-      <label for="moneda">Moneda
-        <select id="moneda"><option value="USD">USD</option><option value="ARS">ARS</option></select>
-      </label>
+    <div class="vid">
+      <video controls preload="metadata" poster="videos/ymspro-video.jpg" src="videos/ymspro-video.mp4"></video>
+      <p class="note">Mirá cómo funciona (1:47).</p>
     </div>
-    <div class="results" aria-live="polite">
-      <div class="res now"><div class="n" id="horasHoy">–</div><div class="l">horas de espera por mes hoy</div></div>
-      <div class="res now"><div class="n" id="costoHoy">–</div><div class="l">costo de esa espera por mes</div></div>
-      <div class="res save"><div class="n" id="horasAhorro">–</div><div class="l">horas que se recuperan por mes</div></div>
-      <div class="res save"><div class="n" id="ahorro">–</div><div class="l">ahorro estimado por mes</div></div>
-    </div>
-    <div class="bars" aria-hidden="true">
-      <div class="bar-row"><span>Hoy</span><div class="track"><div class="fill now" id="barHoy" style="width:100%"></div></div></div>
-      <div class="bar-row"><span>Con YMSPro</span><div class="track"><div class="fill after" id="barDespues" style="width:33%"></div></div></div>
-    </div>
-    <p class="note">Cálculo: camiones por día × días por mes × minutos de espera ÷ 60 × costo por hora. La espera objetivo es un dato que ponés vos; conviene medir la espera real una vez implementado.</p>
-  </section>
-
-  <section class="pilot">
-    <h2>Te lo regalo. Lo que importa es lo que hacemos después.</h2>
-    <ul>
-      <li>YMSPro es una herramienta chica al lado de lo que se puede mejorar en una operación logística. Por eso lo ofrezco sin costo y sin plazo a los primeros depósitos.</li>
-      <li>Mi trabajo es encontrar ahorros y mejoras de proceso en depósitos y distribución, y esos ahorros son mucho mayores que lo que cuesta un sistema de turnos.</li>
-      <li>Lo configuramos juntos y lo usás: así ves cómo trabajo, con números, y después decidís si querés que sigamos con otras mejoras.</li>
-    </ul>
   </section>
 
   <section class="contact" id="contacto">
-    <h2>Probalo en tu depósito, sin costo</h2>
-    <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas para operaciones logísticas. Si querés ver YMSPro funcionando en tu depósito, escribime y charlamos 15 minutos para ver cómo lo ponemos en marcha.</p>
+    <h2>Charlemos 15 minutos, el cupo es limitado</h2>
+    <p>Soy Martín Resnicoff, ingeniero industrial. Desarrollo sistemas para operaciones logísticas. Escribime o llamame hoy: contame qué tenés hoy y vemos por cuál de los dos caminos empezamos.</p>
     <div class="rows">
       <div class="row"><span class="k">Email</span><span class="v" id="vEmail">martin@resnicoff.dev</span><button class="copy" type="button" data-copy="vEmail">Copiar</button></div>
       <div class="row"><span class="k">WhatsApp</span><span class="v" id="vTel">+54 9 11 2364 3945</span><button class="copy" type="button" data-copy="vTel">Copiar</button></div>
@@ -199,36 +196,8 @@ gtag('config', 'G-230SQF2DL4');
 
   <footer>YMSPro es un desarrollo propio de Martín Resnicoff · <a href="https://www.ymspro.com.ar/" target="_blank" rel="noopener">ymspro.com.ar</a> · <a href="/#yms">Ver en el portfolio</a></footer>
 </div>
-
 <script>
 (function () {
-  var ids = ["camiones", "dias", "espera", "objetivo", "costo", "moneda"];
-  var el = {};
-  ids.forEach(function (i) { el[i] = document.getElementById(i); });
-  function num(x) { var v = parseFloat(x.value); return isFinite(v) && v > 0 ? v : 0; }
-  function money(v, cur) {
-    try { return new Intl.NumberFormat("es-AR", { style: "currency", currency: cur, maximumFractionDigits: 0 }).format(v); }
-    catch (e) { return cur + " " + Math.round(v); }
-  }
-  function hours(v) { return new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 }).format(v) + " h"; }
-  function calc() {
-    var cam = num(el.camiones), dias = num(el.dias), esp = num(el.espera), obj = num(el.objetivo), costo = num(el.costo);
-    var cur = el.moneda.value;
-    if (obj > esp) obj = esp;
-    var hHoy = cam * dias * esp / 60;
-    var hObj = cam * dias * obj / 60;
-    var hAh = hHoy - hObj;
-    document.getElementById("horasHoy").textContent = hours(hHoy);
-    document.getElementById("costoHoy").textContent = money(hHoy * costo, cur);
-    document.getElementById("horasAhorro").textContent = hours(hAh);
-    document.getElementById("ahorro").textContent = money(hAh * costo, cur);
-    var pct = esp > 0 ? Math.max(2, Math.round(obj / esp * 100)) : 2;
-    document.getElementById("barHoy").style.width = "100%";
-    document.getElementById("barDespues").style.width = pct + "%";
-  }
-  ids.forEach(function (i) { el[i].addEventListener("input", calc); el[i].addEventListener("change", calc); });
-  calc();
-
   document.querySelectorAll("button.copy").forEach(function (b) {
     b.addEventListener("click", function () {
       var node = document.getElementById(b.getAttribute("data-copy"));
@@ -246,5 +215,6 @@ gtag('config', 'G-230SQF2DL4');
   });
 })();
 </script>
+
 </body>
 </html>
