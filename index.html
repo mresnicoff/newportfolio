@@ -1,14 +1,5 @@
 <html lang="es">
 <head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-230SQF2DL4"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-230SQF2DL4');
-</script>
-
 <meta charset="utf-8">
 <title>Martín Resnicoff · Simulación e innovación logística</title>
 <meta name="description" content="Diseño y costeo de operaciones logísticas. Simulación 3D para ver la operación funcionando antes de firmar el contrato.">
@@ -115,13 +106,6 @@ a{color:inherit}
 .result.on{display:flex}
 .result strong{font:800 2.4rem/1 var(--f-display);color:var(--cyan)}
 .links{display:flex;flex-wrap:wrap;gap:12px}
-.case h3 .pro{color:var(--amber);text-transform:none}
-.head{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:6px 18px}
-.head .seal{margin:0 0 14px auto}
-@media(min-width:1000px){.head .seal{margin:-34px 0 -40px auto}}
-.seal{display:inline-grid;place-items:center;width:104px;aspect-ratio:1;padding:16px;background:#ffc933;color:#1a1204;clip-path:polygon(50.0% 0.0%,56.4% 9.5%,65.5% 2.4%,68.6% 13.5%,79.4% 9.5%,79.0% 21.0%,90.5% 20.6%,86.5% 31.4%,97.6% 34.5%,90.5% 43.6%,100.0% 50.0%,90.5% 56.4%,97.6% 65.5%,86.5% 68.6%,90.5% 79.4%,79.0% 79.0%,79.4% 90.5%,68.6% 86.5%,65.5% 97.6%,56.4% 90.5%,50.0% 100.0%,43.6% 90.5%,34.5% 97.6%,31.4% 86.5%,20.6% 90.5%,21.0% 79.0%,9.5% 79.4%,13.5% 68.6%,2.4% 65.5%,9.5% 56.4%,0.0% 50.0%,9.5% 43.6%,2.4% 34.5%,13.5% 31.4%,9.5% 20.6%,21.0% 21.0%,20.6% 9.5%,31.4% 13.5%,34.5% 2.4%,43.6% 9.5%);font:800 1.26rem/.92 var(--f-display);text-transform:uppercase;text-align:center;text-decoration:none;transform:rotate(-8deg);transition:transform .15s}
-.seal:hover{transform:rotate(-8deg) scale(1.07)}
-@media(prefers-reduced-motion:reduce){.seal{transition:none}}
 
 /* chat (bot) */
 .chat{position:absolute;inset:0;display:flex;flex-direction:column;padding:14px 16px 34px;gap:8px}
@@ -278,7 +262,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
           <p class="tag" data-i="p3.tag">Una propuesta que se ve y se prueba antes de firmarla</p>
           <p class="d" data-i="p3.d">Una propuesta operativa armada con el simulador, para un cliente de ejemplo. Resume lo que necesita el cliente, compara tres formas de operar con su costo por día, muestra el depósito diseñado en 3D, simula un día completo y termina con la operación recomendada. Los costos del ejemplo son ilustrativos.</p>
           <p class="result" data-result="presentacion"><strong></strong><span></span></p>
-          <div class="links" style="align-items:center"><button class="btn" type="button" data-full="pres" data-i="vid.full" hidden>Ver el video completo</button><a class="seal" href="simulacion-oferta.html" data-i="pres.offer" style="margin-left:auto">Oferta especial</a></div>
+          <div class="links"><button class="btn" type="button" data-full="pres" data-i="vid.full" hidden>Ver el video completo</button></div>
           <div class="links" data-demo="presentacion"></div>
         </div>
       </article>
@@ -286,7 +270,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
       <article class="case flip" id="yms">
         <div class="vis"><canvas id="v-dock" role="img" aria-label="Agenda de camiones por dock a lo largo del día"></canvas><span class="note" data-i="note">Vista ilustrativa</span></div>
         <div>
-          <div class="head"><h3>YMS<span class="pro">Pro</span></h3><a class="seal" href="ymspro-oferta.html" data-i="yms.offer">Oferta especial</a></div>
+          <h3>YMSPro</h3>
           <p class="tag" data-i="p6.tag">Cada camión, en su dock y a su hora</p>
           <p class="d" data-i="p6.d">Una aplicación para coordinar la llegada de camiones a un depósito. Maneja los turnos, el check-in y el check-out, la asignación de docks, la fila de espera y los documentos que exige cada operación, con usuarios por rol y un panel de control.</p>
           <p class="result" data-result="yms"><strong></strong><span></span></p>
@@ -422,8 +406,6 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "pk.h":"Consolidated picking with sorting",
     "pk.tag":"Each item is taken from the rack only once",
     "pk.share":"Shareable page",
-    "yms.offer":"Special offer",
-    "pres.offer":"Special offer",
     "pk.d":"Simulates a full day of consolidated picking with island sorting, supported by AMR robots, to measure the savings versus store-by-store picking. It checks that staging and the buffer do not saturate, that the islands have work, that every truck leaves on time and how many people and how much equipment are needed.",
     "p6.tag":"Every truck at its dock, on time",
     "p6.d":"An app to coordinate truck arrivals at a warehouse. It handles appointments, check-in and check-out, dock assignment, the waiting queue and the documents each operation requires, with role-based users and a control panel.",
@@ -477,8 +459,6 @@ footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mute
     "pk.h":"Picking consolidé avec tri",
     "pk.tag":"Chaque article prélevé une seule fois dans le rack",
     "pk.share":"Page à partager",
-    "yms.offer":"Offre spéciale",
-    "pres.offer":"Offre spéciale",
     "pk.d":"Simule une journée complète de picking consolidé avec tri en îlot, appuyé par des robots AMR, pour mesurer l'économie par rapport au picking par magasin. Vérifie que le staging et le buffer ne saturent pas, que les îlots ont du travail, que chaque camion part à l'heure et combien de personnes et d'équipements sont nécessaires.",
     "p6.tag":"Chaque camion à son quai, à l'heure",
     "p6.d":"Une application pour coordonner l'arrivée des camions dans un entrepôt. Elle gère les rendez-vous, l'enregistrement à l'arrivée et au départ, l'attribution des quais, la file d'attente et les documents requis par chaque opération, avec des utilisateurs par rôle et un tableau de bord.",
